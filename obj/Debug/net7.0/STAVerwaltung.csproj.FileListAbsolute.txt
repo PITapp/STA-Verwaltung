@@ -1,0 +1,60 @@
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\appsettings.Development.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\appsettings.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.staticwebassets.runtime.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.exe
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.deps.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.runtimeconfig.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\STAVerwaltung.pdb
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Radzen.Blazor.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.csproj.AssemblyReference.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.GeneratedMSBuildEditorConfig.editorconfig
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.AssemblyInfoInputs.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.AssemblyInfo.cs
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.csproj.CoreCompileInputs.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.MvcApplicationPartsAssemblyInfo.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.RazorAssemblyInfo.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.RazorAssemblyInfo.cs
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.STAVerwaltung.Microsoft.AspNetCore.StaticWebAssets.props
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.build.STAVerwaltung.props
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.STAVerwaltung.props
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.STAVerwaltung.props
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets.pack.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets.build.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\staticwebassets.development.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\scopedcss\bundle\STAVerwaltung.styles.css
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.csproj.CopyComplete
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\refint\STAVerwaltung.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.pdb
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.genruntimeconfig.cache
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\ref\STAVerwaltung.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Humanizer.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\MySqlConnector.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\System.CodeDom.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\System.IO.Packaging.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\web.config
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\appsettings.Development.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\appsettings.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\appsettings.production.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\fluent-custom.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\STAVerwaltung.deps.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\STAVerwaltung.runtimeconfig.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\fluent-custom.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.AspNetCore.HeaderPropagation.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.AspNetCore.OData.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.OData.Core.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.OData.Edm.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.OData.ModelBuilder.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\Microsoft.Spatial.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Debug\net7.0\STAVerwaltung.MvcApplicationPartsAssemblyInfo.cs

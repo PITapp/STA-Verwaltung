@@ -1,0 +1,133 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\fluent-base.css",
+      "PackagePath": "staticwebassets\\css\\fluent-base.css"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-Black.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Black.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-BlackIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BlackIt.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-Bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Bold.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-BoldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-BoldIt.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-ExtraLight.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLight.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-ExtraLightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-ExtraLightIt.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-It.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-It.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-Light.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Light.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-LightIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-LightIt.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Regular.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-Semibold.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-Semibold.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff",
+      "PackagePath": "staticwebassets\\fonts\\SourceSansPro-SemiboldIt.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-regular.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v15-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-300.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v15-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-700.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v15-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v15-latin-regular.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v30-latin-300.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-300.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v30-latin-500.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-500.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v30-latin-700.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-700.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\fonts\\roboto-v30-latin-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",
+      "PackagePath": "staticwebassets\\images\\Schriftzug STA-Verwaltung klein.png"
+    },
+    {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\login.jpg",
+      "PackagePath": "staticwebassets\\images\\login.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.STAVerwaltung.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.STAVerwaltung.props",
+      "PackagePath": "build\\STAVerwaltung.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.STAVerwaltung.props",
+      "PackagePath": "buildMultiTargeting\\STAVerwaltung.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.STAVerwaltung.props",
+      "PackagePath": "buildTransitive\\STAVerwaltung.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

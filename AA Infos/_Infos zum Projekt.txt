@@ -1,0 +1,14 @@
+####### Hauptfarbe #######
+Light Türkis
+CMYK: C=57 M=0 Y=20 K=0
+Hex: #6EC6D1
+
+####### Englischen Text in Deutsch eintragen #######
+Controllers > AccountController.Controller
+    return RedirectWithError("Invalid user or password", redirectUrl);
+    return RedirectWithError("Benutzername oder Passwort falsch", redirectUrl);
+
+    return BadRequest("Invalid password");
+    return BadRequest("Passwort falsch");
+
+Achtung: Keine Umlaute im Text verwenden, das führt zu einem Fehler!
