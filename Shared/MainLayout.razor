@@ -4,7 +4,7 @@
 <RadzenTooltip />
 <RadzenContextMenu />
 
-<RadzenLayout style="grid-template-areas: 'rz-sidebar rz-header' 'rz-sidebar rz-body';">
+<RadzenLayout style="grid-template-areas: 'rz-header rz-header' 'rz-sidebar rz-body'">
     <RadzenHeader>
         <RadzenRow JustifyContent="JustifyContent.Start" AlignItems="AlignItems.Center" Gap="0">
             <RadzenColumn Size="5">
@@ -43,9 +43,14 @@
         </RadzenStack>
         <RadzenPanelMenu>
             <RadzenPanelMenuItem Text="Home" Path="" />
+            <RadzenPanelMenuItem Text="Adressen" Path="adressen"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="religionen" Text="Religionen"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Organisationen" Path="organisationen"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Organisationen Test" Path="organisationentest"></RadzenPanelMenuItem>
         </RadzenPanelMenu>
         <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding);">
-            <RadzenText Text="STA-Verwaltung v1.0.0" TextStyle="Radzen.Blazor.TextStyle.Caption" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
+            <RadzenText Text="STA-Verwaltung v1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
             <RadzenText Text="Copyright Ⓒ 2023" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
         </RadzenStack>
     </RadzenSidebar>

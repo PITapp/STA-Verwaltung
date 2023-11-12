@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eVSY0gguRrnqEh64DWR9X1g4+ySOW9eYuEUYLMsUS2I=",
+  "Hash": "9AMKPAv4pDTfqg4E7RwjXKiyF0MPO8+0kImvsdOi+qs=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -474,6 +474,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\login.jpg"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\logo-login.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/logo-login.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo-login.png"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\logo.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",

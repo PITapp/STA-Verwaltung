@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9NQMQTw8f8vA/er5bMouW/ckuEcPkpp82tfsjJalGao=",
+  "Hash": "/7dejzSoe25LM7+N5t8NPXjWfRZw4YcSz7XpJess/QI=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -508,6 +508,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/Schriftzug STA-Verwaltung klein.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Schriftzug STA-Verwaltung klein.png"
     },
     {
       "Identity": "C:\\Users\\Günther\\.nuget\\packages\\radzen.blazor\\4.20.4\\staticwebassets\\css\\dark-base.css",

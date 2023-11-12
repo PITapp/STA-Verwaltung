@@ -1,0 +1,154 @@
+@page "/add-gemeinden"
+@attribute [Authorize]
+
+<PageTitle>Add Gemeinden</PageTitle>
+    <RadzenColumn SizeMD=12>
+        <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Gemeinden</RadzenAlert>
+        <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Data="@gemeinden" Visible="@(gemeinden != null)" Submit="@FormSubmit">
+          <RadzenStack>
+            <RadzenFormField Text="Titel" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Titel" Name="Titel" />
+                  </ChildContent>    
+                  <Helper>
+                    <RadzenRequiredValidator Component="Titel" Text="Titel is required" />
+                  </Helper>
+            </RadzenFormField>
+            <RadzenFormField Text="Zu Gemeinde Nr" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenNumeric style="display: block; width: 100%" @bind-Value="@gemeinden.ZuGemeindeNr" Name="ZuGemeindeNr" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Kürzel" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Kürzel" Name="Kürzel" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Straße" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Straße" Name="Straße" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="P L Z" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.PLZ" Name="PLZ" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Ort" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Ort" Name="Ort" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Telefon" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Telefon" Name="Telefon" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="E Mail" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.EMail" Name="EMail" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Internet" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Internet" Name="Internet" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Gegründet Am" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDatePicker DateFormat="dd.MM.yyyy" style="display: block; width: 100%" @bind-Value="@gemeinden.GegründetAm" Name="GegründetAm" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Aufgelöst Am" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDatePicker DateFormat="dd.MM.yyyy" style="display: block; width: 100%" @bind-Value="@gemeinden.AufgelöstAm" Name="AufgelöstAm" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Auflösung Info" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.AuflösungInfo" Name="AuflösungInfo" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Bezirk" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Bezirk" Name="Bezirk" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Großbezirk" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Großbezirk" Name="Großbezirk" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Sprachen" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Sprachen" Name="Sprachen" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Wegbeschreibung" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Wegbeschreibung" Name="Wegbeschreibung" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Gesprächsleitervorbereitung Tag" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.GesprächsleitervorbereitungTag" Name="GesprächsleitervorbereitungTag" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Gesprächsleitervorbereitung Zeit" Variant="Variant.Outlined">
+                  <ChildContent>
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Gottesdienst Zeit" Variant="Variant.Outlined">
+                  <ChildContent>
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Andacht Tag" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.AndachtTag" Name="AndachtTag" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Andacht Zeit" Variant="Variant.Outlined">
+                  <ChildContent>
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Info" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenTextBox style="display: block; width: 100%" @bind-Value="@gemeinden.Info" Name="Info" />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Bundeslaender" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDropDown Data="@bundeslaenderForBundeslandCode" TextProperty="Titel" ValueProperty="BundeslandCode" AllowClear=true
+                          style="display: block; width: 100%" @bind-Value="@gemeinden.BundeslandCode" Name="BundeslandCode"
+                           />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Gemeinden Arten" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDropDown Data="@gemeindenArtenForGemeindeArt" TextProperty="Titel" ValueProperty="GemeindeArt" AllowClear=true
+                          style="display: block; width: 100%" @bind-Value="@gemeinden.GemeindeArt" Name="GemeindeArt"
+                           />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="L K Z1" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDropDown Data="@lKZForLKZ" TextProperty="TitelEnglisch" ValueProperty="LKZ1" AllowClear=true
+                          style="display: block; width: 100%" @bind-Value="@gemeinden.LKZ" Name="LKZ"
+                           />
+              </ChildContent>
+            </RadzenFormField>
+            <RadzenFormField Text="Organisationen" Variant="Variant.Outlined">
+                  <ChildContent>
+                    <RadzenDropDown Data="@organisationenForOrganisationCode" TextProperty="Info" ValueProperty="OrganisationCode" AllowClear=true
+                          style="display: block; width: 100%" @bind-Value="@gemeinden.OrganisationCode" Name="OrganisationCode"
+                           />
+              </ChildContent>
+            </RadzenFormField>
+          </RadzenStack>
+          <RadzenStack style="margin-top:1rem;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                    <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Variant="Variant.Flat" />
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick"  />
+          </RadzenStack>
+        </RadzenTemplateForm>
+    </RadzenColumn>
+

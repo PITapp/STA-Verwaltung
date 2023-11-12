@@ -1,0 +1,238 @@
+@page "/organisationen"
+
+@attribute [Authorize]
+
+<PageTitle>Organisationen</PageTitle>
+<RadzenStack>
+    <RadzenRow AlignItems="AlignItems.Center">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Organisationen" TextStyle="TextStyle.H3" TagName="TagName.H1" style="margin: 0" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                <RadzenButton Icon="add_circle_outline" Text="Add" Click="@AddButtonClick" Variant="Variant.Flat" />
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow>
+      <RadzenColumn SizeMD=6>
+     <RadzenCard style="height: 100%">
+        <RadzenDataGrid @ref="grid0" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30})
+            Data="@organisationen0" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" RowSelect="@EditRow">
+            <Columns>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="OrganisationCode" Title="Organisation Code">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Art" Title="Art">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Titel" Title="Titel">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Kurzzeichen" Title="Kurzzeichen">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Vereinigung" Title="Vereinigung">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Verband" Title="Verband">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="VerbandKurzzeichen" Title="Verband Kurzzeichen">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Division" Title="Division">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Straße" Title="Straße">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="PLZ" Title="P L Z">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Ort" Title="Ort">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="LKZ" Title="L K Z">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="BundeslandCode" Title="Bundesland Code">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Telefon" Title="Telefon">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="EMail" Title="E Mail">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Internet" Title="Internet">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="DVRNummer" Title="D V R Nummer">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Sortierung" Title="Sortierung">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Property="Info" Title="Info">
+                </RadzenDataGridColumn>
+            </Columns>
+
+        </RadzenDataGrid>
+    </RadzenCard>
+
+    </RadzenColumn>
+        <RadzenColumn SizeMD=6>
+        <RadzenCard style="height: 100%;margin-top:0px;">
+            <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Organisationen</RadzenAlert>
+            <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Data="@organisationen" Visible="@(organisationen != null)" Submit="@FormSubmit">
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Organisation Code" Component="OrganisationCode" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.OrganisationCode" Name="OrganisationCode" />
+                        <RadzenRequiredValidator Component="OrganisationCode" Text="OrganisationCode is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Art" Component="Art" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Art" Name="Art" />
+                        <RadzenRequiredValidator Component="Art" Text="Art is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Titel" Component="Titel" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Titel" Name="Titel" />
+                        <RadzenRequiredValidator Component="Titel" Text="Titel is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Kurzzeichen" Component="Kurzzeichen" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Kurzzeichen" Name="Kurzzeichen" />
+                        <RadzenRequiredValidator Component="Kurzzeichen" Text="Kurzzeichen is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Vereinigung" Component="Vereinigung" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Vereinigung" Name="Vereinigung" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Verband" Component="Verband" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Verband" Name="Verband" />
+                        <RadzenRequiredValidator Component="Verband" Text="Verband is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Verband Kurzzeichen" Component="VerbandKurzzeichen" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.VerbandKurzzeichen" Name="VerbandKurzzeichen" />
+                        <RadzenRequiredValidator Component="VerbandKurzzeichen" Text="VerbandKurzzeichen is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Division" Component="Division" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Division" Name="Division" />
+                        <RadzenRequiredValidator Component="Division" Text="Division is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Straße" Component="Straße" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Straße" Name="Straße" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="P L Z" Component="PLZ" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.PLZ" Name="PLZ" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Ort" Component="Ort" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Ort" Name="Ort" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="L K Z" Component="LKZ" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.LKZ" Name="LKZ" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Bundesland Code" Component="BundeslandCode" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.BundeslandCode" Name="BundeslandCode" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Telefon" Component="Telefon" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Telefon" Name="Telefon" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="E Mail" Component="EMail" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.EMail" Name="EMail" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Internet" Component="Internet" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Internet" Name="Internet" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="D V R Nummer" Component="DVRNummer" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.DVRNummer" Name="DVRNummer" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Sortierung" Component="Sortierung" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenNumeric style="display: block; width: 100%" @bind-Value="@organisationen.Sortierung" Name="Sortierung" />
+                        <RadzenRequiredValidator Component="Sortierung" Text="Sortierung is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Info" Component="Info" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.Info" Name="Info" />
+                    </RadzenColumn>
+                </RadzenRow>
+              <RadzenStack  Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                        <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Variant="Variant.Flat" />
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick" Visible=false />
+              </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenCard>
+        </RadzenColumn>  </RadzenRow>
+</RadzenStack>

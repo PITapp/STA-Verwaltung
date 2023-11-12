@@ -1,4 +1,5 @@
-@page "/adressen"
+@page "/adressen"
+
 @attribute [Authorize]
 
 <PageTitle>Adressen</PageTitle>
@@ -91,14 +92,6 @@
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="LKZ1.TitelEnglisch" Title="L K Z1">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenSortierungFamilie.Titel" Title="Adressen Sortierung Familie">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Filterable="false" Sortable="false" Width="70px" TextAlign="TextAlign.Center">
-                    <Template Context="adressen">
-
-                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Size="ButtonSize.Medium"
-                            Shade="Shade.Lighter" Variant="Variant.Flat"
-                            Click=@(args => GridDeleteButtonClick(args, adressen)) @onclick:stopPropagation="true" />
-                    </Template>
                 </RadzenDataGridColumn>
             </Columns>
 

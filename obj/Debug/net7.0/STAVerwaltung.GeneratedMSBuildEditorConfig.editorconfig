@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXBwbGljYXRpb25Vc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddGemeinden.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkR2VtZWluZGVuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Adressen.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRyZXNzZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFwcGxpY2F0aW9uVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/EditGemeinden.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEdlbWVpbmRlbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Gemeinden.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtZWluZGVuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,8 +72,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Organisationen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pc2F0aW9uZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/OrganisationenTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pc2F0aW9uZW5UZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Religionen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVsaWdpb25lbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Unauthorized.razor]

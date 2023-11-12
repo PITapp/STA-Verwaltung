@@ -1,0 +1,62 @@
+@page "/religionen"
+
+@attribute [Authorize]
+
+<PageTitle>Religionen</PageTitle>
+<RadzenStack>
+    <RadzenRow AlignItems="AlignItems.Center">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Religionen" TextStyle="TextStyle.H3" TagName="TagName.H1" style="margin: 0" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                <RadzenButton Icon="add_circle_outline" Text="Add" Click="@AddButtonClick" Variant="Variant.Flat" />
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow>
+      <RadzenColumn SizeMD=6>
+     <RadzenCard style="height: 100%">
+        <RadzenDataGrid @ref="grid0" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30})
+            Data="@religionen0" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Religionen" RowSelect="@EditRow">
+            <Columns>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Religionen" Property="ReligionCode" Title="Religion Code">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Religionen" Property="Titel" Title="Titel">
+                </RadzenDataGridColumn>
+            </Columns>
+
+        </RadzenDataGrid>
+    </RadzenCard>
+
+    </RadzenColumn>
+        <RadzenColumn SizeMD=6>
+        <RadzenCard style="height: 100%;margin-top:0px;">
+            <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Religionen</RadzenAlert>
+            <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Religionen" Data="@religionen" Visible="@(religionen != null)" Submit="@FormSubmit">
+              <RadzenStack>
+                <RadzenFormField Text="Religion Code" Variant="Variant.Text">
+                      <ChildContent>
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@religionen.ReligionCode" Name="ReligionCode" />
+                      </ChildContent>    
+                      <Helper>
+                        <RadzenRequiredValidator Component="ReligionCode" Text="ReligionCode is required" />
+                      </Helper>
+                </RadzenFormField>
+                <RadzenFormField Text="Titel" Variant="Variant.Text">
+                      <ChildContent>
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@religionen.Titel" Name="Titel" />
+                      </ChildContent>    
+                      <Helper>
+                        <RadzenRequiredValidator Component="Titel" Text="Titel is required" />
+                      </Helper>
+                </RadzenFormField>
+              </RadzenStack>
+              <RadzenStack style="margin-top:1rem;" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                        <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Variant="Variant.Flat" />
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick" Visible=false />
+              </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenCard>
+        </RadzenColumn>  </RadzenRow>
+</RadzenStack>

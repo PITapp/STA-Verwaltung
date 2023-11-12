@@ -26,9 +26,6 @@ namespace STAVerwaltung.Models.dbSTAVerwaltung
         [Required]
         public int Sortierung2 { get; set; }
 
-        [Required]
-        public string AdressenEreignisseArtencol { get; set; }
-
         public ICollection<AdressenEreignisse> AdressenEreignisse { get; set; }
 
     }

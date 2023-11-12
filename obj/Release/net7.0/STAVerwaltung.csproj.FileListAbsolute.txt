@@ -43,3 +43,11 @@ C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\refint\
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\STAVerwaltung.pdb
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\STAVerwaltung.genruntimeconfig.cache
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\ref\STAVerwaltung.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.AspNetCore.HeaderPropagation.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.AspNetCore.OData.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.OData.Core.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.OData.Edm.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.OData.ModelBuilder.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.Spatial.dll
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\STAVerwaltung.MvcApplicationPartsAssemblyInfo.cs

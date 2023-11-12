@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\fonts\\roboto-v30-latin-regular.woff"
     },
     {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",
+      "PackagePath": "staticwebassets\\images\\Schriftzug STA-Verwaltung klein.png"
+    },
+    {
       "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\login.jpg",
       "PackagePath": "staticwebassets\\images\\login.jpg"
     },
