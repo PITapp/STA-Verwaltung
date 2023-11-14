@@ -91,6 +91,9 @@
     --rz-on-danger-lighter: #7b1d21;
     --rz-on-danger-dark: #ffffff;
     --rz-on-danger-darker: #ffffff;
+
+    /* ------- Farbe Platzhalter im Eingabefeld ------- */
+    --rz-input-placeholder-color: #AFAFAF;
 }
 
 body {
@@ -155,4 +158,10 @@ a:focus {
 
 .loading-progress-text:after {
     content: var(--blazor-load-percentage-text, "Loading");
+}
+
+
+/* ------- Farbe Platzhalter im Eingabefeld ------- */
+.rz-text-truncate {
+    color: var(--rz-input-placeholder-color);
 }

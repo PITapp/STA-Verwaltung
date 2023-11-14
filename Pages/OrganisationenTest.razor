@@ -74,7 +74,7 @@
         <RadzenCard style="height: 100%;margin-top:0px;">
             <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Organisationen</RadzenAlert>
             <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Data="@organisationen" Visible="@(organisationen != null)" Submit="@FormSubmit">
-              <RadzenStack>
+              <RadzenStack Reverse="false" Gap="7px">
                 <RadzenFormField Text="Organisation Code" Variant="@variant">
                       <ChildContent>
                         <RadzenTextBox style="display: block; width: 100%" @bind-Value="@organisationen.OrganisationCode" Name="OrganisationCode" />

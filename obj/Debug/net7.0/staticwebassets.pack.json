@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\fluent-base.css"
     },
     {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\material3-base.css",
+      "PackagePath": "staticwebassets\\css\\material3-base.css"
+    },
+    {
       "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

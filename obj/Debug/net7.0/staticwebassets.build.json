@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9AMKPAv4pDTfqg4E7RwjXKiyF0MPO8+0kImvsdOi+qs=",
+  "Hash": "KBH5d1hKBPnOonshCVHXKlpMg4dfnOFQHdE+cn39RL8=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\fluent-base.css"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\material3-base.css",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "css/material3-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\material3-base.css"
     },
     {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\css\\site.css",
