@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wS3SEowSW6c1IEZjaqVHSOi6rrqi5qOws5n3WIudFm6fRBw/HBakd1s9JZH0PcwVZKCG1KX2MNq2f9hBhxDdUA==",
+  "dgSpecHash": "kgTzKEdvZQyBrzne0XOUYWbZmr7j7qyc+vxEeJwzby3eLWV5OEfQZm3p8EPMO/nPAkJ2Pk0O7IeXpGVFbNAUrw==",
   "success": true,
   "projectFilePath": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\STAVerwaltung.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\Günther\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\mysqlconnector\\2.2.0\\mysqlconnector.2.2.0.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0-alpha.1\\pomelo.entityframeworkcore.mysql.7.0.0-alpha.1.nupkg.sha512",
-    "C:\\Users\\Günther\\.nuget\\packages\\radzen.blazor\\4.20.4\\radzen.blazor.4.20.4.nupkg.sha512",
+    "C:\\Users\\Günther\\.nuget\\packages\\radzen.blazor\\4.21.3\\radzen.blazor.4.21.3.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
@@ -52,7 +52,11 @@
     "C:\\Users\\Günther\\.nuget\\packages\\system.linq.dynamic.core\\1.3.0\\system.linq.dynamic.core.1.3.0.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
     "C:\\Users\\Günther\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\Günther\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\Günther\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\Günther\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Günther\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Günther\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Günther\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

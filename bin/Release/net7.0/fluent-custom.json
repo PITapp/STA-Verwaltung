@@ -70,5 +70,5 @@
   "--rz-on-danger-light": "#ffffff",
   "--rz-on-danger-lighter": "#7b1d21",
   "--rz-on-danger-dark": "#ffffff",
-  "--rz-on-danger-darker": "#ffffff"
+  "--rz-on-danger-darker": "#ffffff"  
 }

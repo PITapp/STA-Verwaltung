@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Components.Web;
 using Radzen;
 using Radzen.Blazor;
 
-namespace STAVerwaltung.Shared
+namespace STAVerwaltung.Pages
 {
-    public partial class TestLayout
+    public partial class StartMenue
     {
         [Inject]
         protected IJSRuntime JSRuntime { get; set; }
@@ -30,14 +30,7 @@ namespace STAVerwaltung.Shared
         [Inject]
         protected NotificationService NotificationService { get; set; }
 
-        bool sidebarExpanded = true;
-
         [Inject]
         protected SecurityService Security { get; set; }
-
-        void SidebarToggleClick()
-        {
-            sidebarExpanded = !sidebarExpanded;
-        }
     }
 }

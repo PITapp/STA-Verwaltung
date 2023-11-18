@@ -8,15 +8,26 @@
     <RadzenHeader Style="height: 48px">
         <RadzenRow JustifyContent="JustifyContent.Start" AlignItems="AlignItems.Center" Gap="0">
             <RadzenColumn Size="5" Style="height: 48px">
-                <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                    <RadzenIcon Icon="apps" Style="font-size: 24px"></RadzenIcon>
-                </RadzenButton>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="Radzen.JustifyContent.Start" AlignItems="Radzen.AlignItems.Center">
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" Click="@ButtonMenueClick">
+                        <RadzenIcon Icon="menu" Style="font-size: 24px"></RadzenIcon>
+                    </RadzenButton>
+                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein.png" Style="height: 32px; margin-left: 16px"></RadzenImage>
+                </RadzenStack>
             </RadzenColumn>
             <RadzenColumn Size="7">
                 <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End">
-                    <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick">
+                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                        <RadzenIcon Icon="search" Style="font-size: 24px"></RadzenIcon>
+                    </RadzenButton>
+                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                        <RadzenIcon Icon="notifications" Style="font-size: 24px"></RadzenIcon>
+                    </RadzenButton>
+                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                        <RadzenIcon Icon="settings" Style="font-size: 24px"></RadzenIcon>
+                    </RadzenButton>
+                    <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick" Style="padding-right: 16px; padding-left: 16px">
                         <ChildContent>
-
                             <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
                             <RadzenProfileMenuItem Path="application-users" Icon="person" Text="Users" />
                             <RadzenProfileMenuItem Path="application-roles" Icon="security" Text="Roles" />
@@ -24,7 +35,7 @@
                         </ChildContent>
                         <Template>
                             @Security.User?.Name
-                            <RadzenGravatar Email="@Security.User?.Name" />
+                            <RadzenGravatar Email="@Security.User?.Email" Style="margin-left: 8px; margin-right: 8px" />
                         </Template>
                     </RadzenProfileMenu>
                 </RadzenStack>
@@ -32,7 +43,7 @@
         </RadzenRow>
     </RadzenHeader>
     <RadzenBody>
-        <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="max-width: 1440px;">
+        <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="padding: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
             <RadzenColumn Size="12">
             @Body
             </RadzenColumn>
@@ -60,6 +71,5 @@
 
 @code {
     // Setze sidebarExpanded während der Bearbetung auf "true", damit du die Sidebar siehst und bearbeiten kannst!
-
-    bool sidebarExpanded = false;
+    bool sidebarExpanded = true;
 }

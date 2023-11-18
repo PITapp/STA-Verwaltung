@@ -51,3 +51,11 @@ C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microso
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.OData.ModelBuilder.dll
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\Microsoft.Spatial.dll
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\STAVerwaltung.MvcApplicationPartsAssemblyInfo.cs
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\web.config
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\appsettings.Development.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\appsettings.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\appsettings.production.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\fluent-custom.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\STAVerwaltung.deps.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Release\net7.0\AA Publish\STAVerwaltung.runtimeconfig.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\obj\Release\net7.0\STAVerwaltung.sourcelink.json

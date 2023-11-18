@@ -10799,6 +10799,7 @@ input::placeholder {
   --rz-menu-item-icon-hover-color: var(--rz-text-title-color);
   --rz-menu-item-offset: 1rem;
   --rz-menu-item-transition: none;
+  --rz-menu-item-disabled-opacity: 0.2;
   --rz-menu-top-item-padding: 0.5rem;
   --rz-menu-top-item-border-radius: 0;
   --rz-menu-top-item-color: var(--rz-text-contrast-color);
@@ -10966,6 +10967,12 @@ input::placeholder {
 .rz-navigation-item-link,
 .rz-navigation-item-text {
   transition: var(--rz-menu-item-transition);
+}
+
+li.rz-navigation-item.rz-state-disabled {
+  opacity: var(--rz-menu-item-disabled-opacity);
+  cursor: initial;
+  pointer-events: none;
 }
 
 .rz-menu-toggle-item {
@@ -19632,6 +19639,7 @@ button.rz-colorpicker-trigger .rzi:before {
 .rz-form-field.rz-state-disabled .rz-state-disabled,
 .rz-form-field.rz-state-disabled :disabled {
   color: var(--rz-input-disabled-color);
+  opacity: 1;
 }
 .rz-form-field.rz-variant-outlined .rz-form-field-start, .rz-form-field.rz-variant-filled .rz-form-field-start, .rz-form-field.rz-variant-flat .rz-form-field-start {
   padding-right: 0;

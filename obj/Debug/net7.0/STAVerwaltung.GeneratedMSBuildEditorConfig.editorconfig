@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = STAVerwaltung
 build_property.RootNamespace = STAVerwaltung
 build_property.ProjectDir = C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -88,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVsaWdpb25lbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/StartMenue.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRNZW51ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Unauthorized.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVW5hdXRob3JpemVkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,10 +112,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Shared/RedirectToLogin.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Shared/TestLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRlc3RMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/_Imports.razor]

@@ -37,11 +37,14 @@ namespace STAVerwaltung.Pages
 
         protected RadzenDataGrid<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> grid0;
 
+        string strCountGemeinden;
+
         [Inject]
         protected SecurityService Security { get; set; }
         protected override async Task OnInitializedAsync()
         {
             gemeinden = await dbSTAVerwaltungService.GetGemeinden(new Query { Expand = "Bundeslaender,GemeindenArten,LKZ1,Organisationen" });
+            SetCountGemeinden();
         }
 
         protected async Task AddButtonClick(MouseEventArgs args)
@@ -78,6 +81,36 @@ namespace STAVerwaltung.Pages
                     Detail = $"Unable to delete Gemeinden"
                 });
             }
+        }
+
+        protected async System.Threading.Tasks.Task DataGrid0Filter(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
+        {
+            SetCountGemeinden();
+        }
+
+        protected async System.Threading.Tasks.Task DataGrid0FilterCleared(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
+        {
+            SetCountGemeinden();
+        }
+
+        protected void SetCountGemeinden()
+        {
+            if (grid0 == null)
+            {
+                strCountGemeinden = gemeinden.Count().ToString();
+            } else {
+                if (gemeinden.Count() == grid0.View.Count())
+                {
+                    strCountGemeinden = gemeinden.Count().ToString();
+                } else {
+                    strCountGemeinden = grid0.View.Count().ToString() + " (Filter)";
+                }
+            }
+        }
+
+        protected async System.Threading.Tasks.Task Button1Click(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            await DialogService.OpenAsync<OrganisationenTest>("Organisationen Test", null, new DialogOptions { Resizable = true, Draggable = true, CloseDialogOnOverlayClick = true });
         }
     }
 }
