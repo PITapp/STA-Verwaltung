@@ -70,5 +70,17 @@
   "--rz-on-danger-light": "#ffffff",
   "--rz-on-danger-lighter": "#7b1d21",
   "--rz-on-danger-dark": "#ffffff",
-  "--rz-on-danger-darker": "#ffffff"  
+  "--rz-on-danger-darker": "#ffffff",
+  "--rz-input-placeholder-color": "#AFAFAF",
+  "--rz-panel-menu-icon-width": "1rem",
+  "--rz-panel-menu-icon-height": "1rem",
+  "--rz-panel-menu-icon-font-size": "1.3rem",
+  "--rz-panel-menu-icon-margin": "0 0.8rem 0 0",
+  "--rz-panel-menu-background-color": "rgba(229, 114, 114, 0)",
+  "--rz-panel-menu-icon-color": "#e68c30",
+  "--rz-panel-menu-font-weight": "400px",
+  "--rz-sidebar-background-color": "#646464",
+  "--rz-sidebar-color": "#f0f0f0",
+  "--rz-panel-menu-color": "#f0f0f0",
+  "--rz-panel-menu-item-border": "1px groove #edebe9"
 }

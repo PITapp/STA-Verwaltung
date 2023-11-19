@@ -4,12 +4,12 @@
 <RadzenTooltip />
 <RadzenContextMenu />
 
-<RadzenLayout style="grid-template-areas: 'rz-header rz-header' 'rz-sidebar rz-body'">
+<RadzenLayout Style="grid-template-columns: auto 1fr auto; grid-template-areas: 'rz-header rz-header rz-header' 'rz-sidebar rz-body rz-right-sidebar'">
     <RadzenHeader Style="height: 48px">
         <RadzenRow JustifyContent="JustifyContent.Start" AlignItems="AlignItems.Center" Gap="0">
             <RadzenColumn Size="5" Style="height: 48px">
                 <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="Radzen.JustifyContent.Start" AlignItems="Radzen.AlignItems.Center">
-                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" Click="@ButtonMenueClick">
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)">
                         <RadzenIcon Icon="menu" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
                     <RadzenImage Path="images\Schriftzug STA-Verwaltung klein.png" Style="height: 32px; margin-left: 16px"></RadzenImage>
@@ -17,13 +17,13 @@
             </RadzenColumn>
             <RadzenColumn Size="7">
                 <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End">
-                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                        <RadzenIcon Icon="search" Style="font-size: 24px"></RadzenIcon>
+                    <RadzenButton Click="@ButtonMenueClick" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                        <RadzenIcon Icon="apps" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                    <RadzenButton Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
                         <RadzenIcon Icon="notifications" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenButton Click="@(() => sidebarExpanded = !sidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                    <RadzenButton Click="@(() => rightSidebarExpanded = !rightSidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
                         <RadzenIcon Icon="settings" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
                     <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick" Style="padding-right: 16px; padding-left: 16px">
@@ -35,41 +35,43 @@
                         </ChildContent>
                         <Template>
                             @Security.User?.Name
-                            <RadzenGravatar Email="@Security.User?.Email" Style="margin-left: 8px; margin-right: 8px" />
+                            <RadzenImage Path="images\KeinBildPerson.png" Style="width: 32px; height: 32px; border-radius: 50%; margin-left: 8px; margin-right: 8px"></RadzenImage>
                         </Template>
                     </RadzenProfileMenu>
                 </RadzenStack>
             </RadzenColumn>
         </RadzenRow>
     </RadzenHeader>
-    <RadzenBody>
-        <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="padding: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
-            <RadzenColumn Size="12">
-            @Body
-            </RadzenColumn>
-        </RadzenRow>
-    </RadzenBody>
-    <RadzenSidebar @bind-Expanded="@sidebarExpanded" style="z-index: 2" Responsive="false">
-        <RadzenStack AlignItems="Radzen.AlignItems.Center" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding); border-bottom: var(--rz-panel-menu-item-border);">
-            <RadzenImage Path="images/logo.png"  style="width: 48px; height: 48px;"></RadzenImage>
-            <RadzenText Text="STA-Verwaltung" TextStyle="Radzen.Blazor.TextStyle.Subtitle1" class="rz-mb-0" style="color: var(--rz-sidebar-color);" />
-        </RadzenStack>
+    <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="z-index: 2; position: relative" Responsive="false">
         <RadzenPanelMenu>
-            <RadzenPanelMenuItem Text="Home" Path="" />
-            <RadzenPanelMenuItem Text="Adressen" Path="adressen"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Path="religionen" Text="Religionen"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Organisationen" Path="organisationen"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Organisationen Test" Path="organisationentest"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Dashboard" Path="dashboard" Icon="dashboard" />
+            <RadzenPanelMenuItem Text="Adressen" Path="adressen" Icon="all_inbox"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="all_inbox"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="religionen" Text="Religionen" Icon="all_inbox"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Organisationen" Path="organisationen" Icon="all_inbox"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Organisationen Test" Path="organisationentest" Icon="all_inbox"></RadzenPanelMenuItem>
         </RadzenPanelMenu>
         <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding);">
             <RadzenText Text="STA-Verwaltung v1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
             <RadzenText Text="Copyright Ⓒ 2023" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
         </RadzenStack>
+   </RadzenSidebar>
+    <RadzenBody>
+            <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="padding: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
+            <RadzenColumn Size="12">
+            @Body
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenBody>
+    <RadzenSidebar @bind-Expanded="@rightSidebarExpanded" Style="width: 300px; grid-area: rz-right-sidebar;" Responsive="false">
+        <div class="rz-p-4">
+            Right Sidebar
+        </div>
     </RadzenSidebar>
 </RadzenLayout>
 
 @code {
     // Setze sidebarExpanded während der Bearbetung auf "true", damit du die Sidebar siehst und bearbeiten kannst!
-    bool sidebarExpanded = true;
+    bool leftSidebarExpanded = true;
+    bool rightSidebarExpanded = false;
 }

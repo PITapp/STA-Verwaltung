@@ -91,9 +91,21 @@
     --rz-on-danger-lighter: #7b1d21;
     --rz-on-danger-dark: #ffffff;
     --rz-on-danger-darker: #ffffff;
-
-    /* ------- Farbe Platzhalter im Eingabefeld ------- */
     --rz-input-placeholder-color: #AFAFAF;
+    --rz-panel-menu-icon-width: 1rem;
+    --rz-panel-menu-icon-height: 1rem;
+    --rz-panel-menu-icon-font-size: 1.3rem;
+    --rz-panel-menu-icon-margin: 0 0.8rem 0 0;
+    --rz-panel-menu-icon-color: #6EC6D1;
+    --rz-panel-menu-font-weight: 400px;
+    --rz-sidebar-background-color: #e3e3e3;
+    --rz-sidebar-color: #818181;
+    --rz-panel-menu-color: #818181;
+    --rz-panel-menu-item-border: 1px solid #edebe9;
+    --rz-panel-menu-background-color: rgba(255, 255, 255, 0);
+    --rz-sidebar-width: 300px;
+    --rz-panel-menu-item-active-color: #6EC6D1;
+    --rz-panel-menu-hover-color: #6EC6D1;
 }
 
 body {
@@ -164,4 +176,22 @@ a:focus {
 /* ------- Farbe Platzhalter im Eingabefeld ------- */
 .rz-text-truncate {
     color: var(--rz-input-placeholder-color);
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 100;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.slide-from-right {
+    animation-duration: 1s; /* the duration of the animation */
+    animation-timing-function: ease-out; /* how the animation will behave */
+    animation-delay: 0s; /* how long to delay the animation from starting */
+    animation-iteration-count: 1; /* how many times the animation will play */
+    animation-name: slideInFromRight; /* the name of the animation we defined above */
 }
