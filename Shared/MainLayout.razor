@@ -42,15 +42,31 @@
             </RadzenColumn>
         </RadzenRow>
     </RadzenHeader>
-    <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="z-index: 2; position: relative" Responsive="false">
-        <RadzenPanelMenu>
+    <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative" Responsive="false">
+        <RadzenPanelMenu Style="padding-right: 12px; padding-left: 12px">
             <RadzenPanelMenuItem Text="Dashboard" Path="dashboard" Icon="dashboard" />
-            <RadzenPanelMenuItem Text="Adressen" Path="adressen" Icon="all_inbox"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="all_inbox"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Path="religionen" Text="Religionen" Icon="all_inbox"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Organisationen" Path="organisationen" Icon="all_inbox"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Organisationen Test" Path="organisationentest" Icon="all_inbox"></RadzenPanelMenuItem>
-        </RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="people_alt"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verbände" Path="verbände" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Institutionen" Path="institutionen" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Kategorien" Path="kategorien" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Ämter" Path="ämter" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Dienstbericht" Path="Dienstbericht" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verträge" Path="verträge" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Filter" Path="filter" Icon="chevron_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Statistik" Path="statistik" Icon="chevron_right"></RadzenPanelMenuItem>
+             <RadzenPanelMenuItem Text="Einstellungen" Path="einstellungen" Icon="chevron_right">
+                <RadzenPanelMenuItem Text="Benutzer"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Stammdaten"> </RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Dienstbericht"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Duplikate"></RadzenPanelMenuItem>
+            </RadzenPanelMenuItem>
+       </RadzenPanelMenu>
         <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding);">
             <RadzenText Text="STA-Verwaltung v1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
             <RadzenText Text="Copyright Ⓒ 2023" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />

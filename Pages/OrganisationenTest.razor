@@ -71,6 +71,9 @@
 
     </RadzenColumn>
         <RadzenColumn SizeMD=6>
+            <RadzenTabs TabPosition="Radzen.TabPosition.Top" Style="height: 300px">
+                <Tabs>
+                    <RadzenTabsItem Text="Tab 1">
         <RadzenCard style="height: 100%;margin-top:0px;">
             <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Organisationen</RadzenAlert>
             <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Organisationen" Data="@organisationen" Visible="@(organisationen != null)" Submit="@FormSubmit">
@@ -201,5 +204,16 @@
               </RadzenStack>
             </RadzenTemplateForm>
         </RadzenCard>
+                    </RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 1"></RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 2"></RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 3"></RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 4"></RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 5"></RadzenTabsItem>
+                    <RadzenTabsItem Text="Test 6 Hallo wie geht es"></RadzenTabsItem>
+                </Tabs>
+            </RadzenTabs>
+
+
         </RadzenColumn>  </RadzenRow>
 </RadzenStack>

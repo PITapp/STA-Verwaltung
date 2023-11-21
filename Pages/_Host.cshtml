@@ -29,7 +29,19 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <!-- 21.11.2023 gp Funktion zum Fokussetzen über den Namen des Elemets -->
+    <script>
+        window.setFocusOnElementByName = (elementName) => {
+            const elements = document.getElementsByName(elementName);
+            if (elements.length > 0) {
+                elements[0].focus();
+            }
+        }
+    </script>    
+
     <script src="_framework/blazor.server.js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+};
+
 </body>
 </html>

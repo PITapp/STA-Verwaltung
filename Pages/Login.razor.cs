@@ -53,5 +53,13 @@ namespace STAVerwaltung.Pages
 
             infoVisible = !string.IsNullOrEmpty(info);
         }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                await JSRuntime.InvokeVoidAsync("setFocusOnElementByName", "Username");            
+            }   
+        }
     }
 }

@@ -53,9 +53,9 @@ namespace STAVerwaltung.Shared
 
         protected async System.Threading.Tasks.Task ButtonMenueClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            await DialogService.OpenAsync<StartMenue>("Start Menue", null, new DialogOptions { CloseDialogOnOverlayClick = true, Top = "0px", Left = "0px" });
-            //await DialogService.OpenSideAsync<StartMenue>("Start Menue", options: new SideDialogOptions { CloseDialogOnOverlayClick = true, Position = DialogPosition.Left, ShowMask = true});
-
+            //await DialogService.OpenAsync<StartMenue>("Start Menue", null, new DialogOptions { Resizable = true, Draggable = true });
+            //await DialogService.OpenSideAsync<StartMenue>("Start Menue", options: new SideDialogOptions { CloseDialogOnOverlayClick = true, Position = DialogPosition.Right, ShowMask = true});
+            await DialogService.OpenSideAsync<StartMenue>("Start Menue", options: new SideDialogOptions { CloseDialogOnOverlayClick = true, Position = DialogPosition.Left, ShowMask = false});
         }
     }
 }
