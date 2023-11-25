@@ -51,11 +51,25 @@ namespace STAVerwaltung.Shared
             }
         }
 
-        protected async System.Threading.Tasks.Task ButtonMenueClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        protected async System.Threading.Tasks.Task ButtonDashboardClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            //await DialogService.OpenAsync<StartMenue>("Start Menue", null, new DialogOptions { Resizable = true, Draggable = true });
-            //await DialogService.OpenSideAsync<StartMenue>("Start Menue", options: new SideDialogOptions { CloseDialogOnOverlayClick = true, Position = DialogPosition.Right, ShowMask = true});
-            await DialogService.OpenSideAsync<StartMenue>("Start Menue", options: new SideDialogOptions { CloseDialogOnOverlayClick = true, Position = DialogPosition.Left, ShowMask = false});
+            NavigationManager.NavigateTo($"/dashboard");
+        }
+
+        protected async System.Threading.Tasks.Task ButtonAufgabenClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            await DialogService.OpenAsync<Aufgaben>("Aufgaben", null, new DialogOptions { Resizable = true, Draggable = true });
+        }
+
+        protected async System.Threading.Tasks.Task PanelMenu0Click(Radzen.MenuItemEventArgs args)
+        {
+            if (args.Path != null)
+            {
+                if (MenüNachAuswahlSchließen) 
+                {
+                    leftSidebarExpanded = false;
+                }
+            }
         }
     }
 }

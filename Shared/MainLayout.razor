@@ -5,89 +5,121 @@
 <RadzenContextMenu />
 
 <RadzenLayout Style="grid-template-columns: auto 1fr auto; grid-template-areas: 'rz-header rz-header rz-header' 'rz-sidebar rz-body rz-right-sidebar'">
+    <!-- Kopfzeile -->
     <RadzenHeader Style="height: 48px">
         <RadzenRow JustifyContent="JustifyContent.Start" AlignItems="AlignItems.Center" Gap="0">
             <RadzenColumn Size="5" Style="height: 48px">
-                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="Radzen.JustifyContent.Start" AlignItems="Radzen.AlignItems.Center">
-                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)">
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="Radzen.JustifyContent.Start"
+                    AlignItems="Radzen.AlignItems.Center">
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px"
+                        Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)">
                         <RadzenIcon Icon="menu" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein.png" Style="height: 32px; margin-left: 16px"></RadzenImage>
+                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein.png"
+                        Style="height: 32px; margin-left: 16px"></RadzenImage>
                 </RadzenStack>
             </RadzenColumn>
             <RadzenColumn Size="7">
-                <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End">
-                    <RadzenButton Click="@ButtonMenueClick" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                        <RadzenIcon Icon="apps" Style="font-size: 24px"></RadzenIcon>
+                <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal"
+                    JustifyContent="JustifyContent.End">
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" IsBusy="false"
+                        Click="@ButtonAufgabenClick">
+                        <RadzenIcon Icon="add_task" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenButton Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                        <RadzenIcon Icon="notifications" Style="font-size: 24px"></RadzenIcon>
+                    <RadzenButton Click="@ButtonDashboardClick"
+                        Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
+                        <RadzenIcon Icon="dashboard" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenButton Click="@(() => rightSidebarExpanded = !rightSidebarExpanded)" Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                        <RadzenIcon Icon="settings" Style="font-size: 24px"></RadzenIcon>
-                    </RadzenButton>
-                    <RadzenProfileMenu Visible="@Security.IsAuthenticated()" Click="@ProfileMenuClick" Style="padding-right: 16px; padding-left: 16px">
+                    <RadzenButton Click="@(() => rightSidebarExpanded = !rightSidebarExpanded)"
+                        Style="height: 48px; font-size: 24px; padding: 0px">
                         <ChildContent>
-                            <RadzenProfileMenuItem Path="profile" Icon="settings" Text="Profile" />
-                            <RadzenProfileMenuItem Path="application-users" Icon="person" Text="Users" />
-                            <RadzenProfileMenuItem Path="application-roles" Icon="security" Text="Roles" />
-                            <RadzenProfileMenuItem Text="Logout" Value="Logout" Icon="power_settings_new" />
+                            <RadzenLabel Text="@Security.User?.Name"
+                                Style="font-size: 14px; font-weight: normal; margin-left: 16px" />
+                            <RadzenImage Path="images\KeinBildPerson.png"
+                                Style="width: 32px; height: 32px; border-radius: 50%; margin-left: 8px; margin-right: 16px">
+                            </RadzenImage>
                         </ChildContent>
-                        <Template>
-                            @Security.User?.Name
-                            <RadzenImage Path="images\KeinBildPerson.png" Style="width: 32px; height: 32px; border-radius: 50%; margin-left: 8px; margin-right: 8px"></RadzenImage>
-                        </Template>
-                    </RadzenProfileMenu>
+                    </RadzenButton>
                 </RadzenStack>
             </RadzenColumn>
         </RadzenRow>
     </RadzenHeader>
-    <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative" Responsive="false">
-        <RadzenPanelMenu Style="padding-right: 12px; padding-left: 12px">
+
+    <!-- Sidebar links -->
+    <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative"  Responsive="false">
+        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px" Click="@PanelMenu0Click">
             <RadzenPanelMenuItem Text="Dashboard" Path="dashboard" Icon="dashboard" />
-            <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="people_alt"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Verbände" Path="verbände" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Institutionen" Path="institutionen" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Kategorien" Path="kategorien" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Ämter" Path="ämter" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Dienstbericht" Path="Dienstbericht" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Verträge" Path="verträge" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Filter" Path="filter" Icon="chevron_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Statistik" Path="statistik" Icon="chevron_right"></RadzenPanelMenuItem>
-             <RadzenPanelMenuItem Text="Einstellungen" Path="einstellungen" Icon="chevron_right">
-                <RadzenPanelMenuItem Text="Benutzer"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Stammdaten"> </RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Dienstbericht"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Duplikate"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verbände" Path="verbände" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Institutionen" Path="institutionen" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Kategorien" Path="kategorien" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Ämter" Path="ämter" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="navigate_next">
             </RadzenPanelMenuItem>
-       </RadzenPanelMenu>
-        <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6" Style="padding: var(--rz-panel-menu-item-padding);">
-            <RadzenText Text="STA-Verwaltung v1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
-            <RadzenText Text="Copyright Ⓒ 2023" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0" style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P" TextAlign="Radzen.TextAlign.Center" />
-        </RadzenStack>
-   </RadzenSidebar>
-    <RadzenBody>
-            <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12" Style="padding: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px">
+            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="navigate_next">
+            </RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Dienstbericht" Path="dienstbericht" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verträge" Path="verträge" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Filter" Path="filter" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Statistik" Path="statistik" Icon="navigate_next"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Einstellungen" Icon="settings">
+                <RadzenPanelMenuItem Text="Benutzer" Path="benutzer" Icon="navigate_next"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Stammdaten" Path="stammdaten" Icon="navigate_next"> </RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Duplikate" Path="duplikate" Icon="navigate_next"></RadzenPanelMenuItem>
+            </RadzenPanelMenuItem>
+        </RadzenPanelMenu>
+        <!-- Sidebar links Fußzeile -->
+        <div style="position: absolute; left: 0px; bottom: 0px; width: 100%">
+            <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6"
+                Style="padding: var(--rz-panel-menu-item-padding);">
+                <RadzenText Text="STA-Verwaltung · Version 1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption"
+                    style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P"
+                    TextAlign="Radzen.TextAlign.Center" />
+                <RadzenText Text="Powered by PITapp" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0"
+                    style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P"
+                    TextAlign="Radzen.TextAlign.Center" />
+            </RadzenStack>
+        </div>
+    </RadzenSidebar>
+
+    <!-- Body -->
+    <RadzenBody Style="padding: 0px">
+        <RadzenRow Style="padding-top: 0px; padding-bottom: 0px; padding-right: 0px; padding-left: 0px; margin: 0px; padding: 0px">
             <RadzenColumn Size="12">
-            @Body
+                @Body
             </RadzenColumn>
         </RadzenRow>
     </RadzenBody>
+
+    <!-- Sidebar rechts -->
     <RadzenSidebar @bind-Expanded="@rightSidebarExpanded" Style="width: 300px; grid-area: rz-right-sidebar;" Responsive="false">
-        <div class="rz-p-4">
-            Right Sidebar
-        </div>
+        <RadzenStack Orientation="Radzen.Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem"
+            Class="rz-p-4">
+            <RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                <RadzenLabel Text="E-Mail:" />
+                <RadzenLabel Text="@Security.User?.Email" />
+            </RadzenStack>
+            <RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.SpaceBetween">
+                <RadzenLabel Text="Menü beim öffnen anzeigen:" />
+                <RadzenSwitch @bind-Value="MenüBeimÖffnenAnzeigen" />
+            </RadzenStack>
+            <RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.SpaceBetween">
+                <RadzenLabel Text="Menü nach der Auswahl schließen:" />
+                <RadzenSwitch @bind-Value="MenüNachAuswahlSchließen" />
+            </RadzenStack>
+        </RadzenStack>
     </RadzenSidebar>
 </RadzenLayout>
 
 @code {
     // Setze sidebarExpanded während der Bearbetung auf "true", damit du die Sidebar siehst und bearbeiten kannst!
     bool leftSidebarExpanded = true;
-    bool rightSidebarExpanded = false;
+    bool rightSidebarExpanded = true;
+
+    bool MenüBeimÖffnenAnzeigen = true;
+    bool MenüNachAuswahlSchließen = false;
 }

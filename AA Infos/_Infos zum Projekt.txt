@@ -12,3 +12,31 @@ Controllers > AccountController.Controller
     return BadRequest("Passwort falsch");
 
 Achtung: Keine Umlaute im Text verwenden, das führt zu einem Fehler!
+
+
+####### Sicherung Menü - Icons #######
+
+        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px">
+            <RadzenPanelMenuItem Text="Dashboard" Path="dashboard" Icon="dashboard" />
+            <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="people_alt"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="home"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="location_city"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verbände" Path="verbände" Icon="corporate_fare"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Institutionen" Path="institutionen" Icon="account_balance"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Kategorien" Path="kategorien" Icon="topic"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Ämter" Path="ämter" Icon="contact_page"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="vertical_split"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="event"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="meeting_room"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="assignment_ind"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Dienstbericht" Path="Dienstbericht" Icon="home_repair_service"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verträge" Path="verträge" Icon="sticky_note_2"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Filter" Path="filter" Icon="filter_alt"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Statistik" Path="statistik" Icon="leaderboard"></RadzenPanelMenuItem>
+             <RadzenPanelMenuItem Text="Einstellungen" Icon="settings">
+                <RadzenPanelMenuItem Text="Benutzer" Path="benutzer" Icon="navigate_next"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Stammdaten" Path="stammdaten" Icon="navigate_next"> </RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Dienstbericht" Path="dienstbericht" Icon="navigate_next"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Duplikate" Path="duplikate" Icon="navigate_next"></RadzenPanelMenuItem>
+            </RadzenPanelMenuItem>
+       </RadzenPanelMenu>

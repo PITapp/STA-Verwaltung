@@ -107,9 +107,12 @@
   "--rz-panel-menu-color": "#ffffff",
   "--rz-panel-menu-item-border": "2px solid #646464",
   "--rz-panel-menu-background-color": "rgba(255, 255, 255, 0)",
-  "--rz-sidebar-width": "300px",
+  "--rz-sidebar-width": "220px",
   "--rz-panel-menu-item-active-color": "#6EC6D1",
   "--rz-panel-menu-hover-color": "#6EC6D1",
   "--rz-panel-menu-item-padding": "0.75rem 0.5rem",
-  "--rz-panel-menu-font-size": "0.975rem"
+  "--rz-panel-menu-font-size": "0.975rem",
+  "--rz-panel-menu-item-background-color": " ",
+  "--rz-panel-menu-hover-background-color": " ",
+  "--rz-panel-menu-item-active-background-color": " "
 }

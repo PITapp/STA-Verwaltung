@@ -50,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbGljYXRpb25Vc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Aufgaben.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXVmZ2FiZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
