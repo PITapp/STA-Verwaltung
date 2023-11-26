@@ -33,23 +33,8 @@ namespace STAVerwaltung.Shared
         [Inject]
         protected NotificationService NotificationService { get; set; }
 
-        // private bool sidebarExpanded = true;
-
         [Inject]
         protected SecurityService Security { get; set; }
-
-        //void SidebarToggleClick()
-        //{
-        //    sidebarExpanded = !sidebarExpanded;
-        //}
-
-        protected void ProfileMenuClick(RadzenProfileMenuItem args)
-        {
-            if (args.Value == "Logout")
-            {
-                Security.Logout();
-            }
-        }
 
         protected async System.Threading.Tasks.Task ButtonDashboardClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
@@ -70,6 +55,11 @@ namespace STAVerwaltung.Shared
                     leftSidebarExpanded = false;
                 }
             }
+        }
+
+        protected async System.Threading.Tasks.Task PanelMenuIAbmeldenClick(Radzen.MenuItemEventArgs args)
+        {
+            Security.Logout();
         }
     }
 }

@@ -126,14 +126,14 @@
     --rz-sidebar-color: #818181;
     --rz-panel-menu-color: #818181;
     --rz-panel-menu-item-border: 1px none #edebe9;
-    --rz-panel-menu-background-color: rgba(255, 255, 255, 0);
+    --rz-panel-menu-background-color: ;
     --rz-sidebar-width: 220px;
     --rz-panel-menu-item-active-color: #6EC6D1;
     --rz-panel-menu-hover-color: #6EC6D1;
     --rz-panel-menu-font-size: 0.975rem;
     --rz-panel-menu-item-background-color:  ;
-    --rz-panel-menu-hover-background-color: rgba(243, 242, 241, 0);
-    --rz-panel-menu-item-active-background-color: rgba(245, 245, 245, 0);
+    --rz-panel-menu-hover-background-color: ;
+    --rz-panel-menu-item-active-background-color: ;
     --rz-panel-menu-item-active-indicator: #6EC6D1;
     --rz-sidebar-border-right: 1px none #edebe9;
     --rz-panel-menu-item-2nd-level-border-radius:  ;

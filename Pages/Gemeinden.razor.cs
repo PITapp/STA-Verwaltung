@@ -33,29 +33,33 @@ namespace STAVerwaltung.Pages
         [Inject]
         public dbSTAVerwaltungService dbSTAVerwaltungService { get; set; }
 
-        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> gemeinden;
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> tabGemeinden;
 
-        protected RadzenDataGrid<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> grid0;
-
-        string strCountGemeinden;
-
-        [Inject]
-        protected SecurityService Security { get; set; }
+        protected RadzenDataGrid<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> gridGemeinden;
+        protected bool isEdit = true;
         protected override async Task OnInitializedAsync()
         {
-            gemeinden = await dbSTAVerwaltungService.GetGemeinden(new Query { Expand = "Bundeslaender,GemeindenArten,LKZ1,Organisationen" });
-            SetCountGemeinden();
+            tabGemeinden = await dbSTAVerwaltungService.GetGemeinden(new Query { Expand = "Bundeslaender,GemeindenArten,LKZ1,Organisationen" });
+
+            bundeslaenderForBundeslandCode = await dbSTAVerwaltungService.GetBundeslaender();
+
+            gemeindenArtenForGemeindeArt = await dbSTAVerwaltungService.GetGemeindenArten();
+
+            lKZForLKZ = await dbSTAVerwaltungService.GetLKZ();
+
+            organisationenForOrganisationCode = await dbSTAVerwaltungService.GetOrganisationen();
         }
 
         protected async Task AddButtonClick(MouseEventArgs args)
         {
-            await DialogService.OpenAsync<AddGemeinden>("Add Gemeinden", null);
-            await grid0.Reload();
+            isEdit = false;
+            gemeinden = new STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden();
         }
 
         protected async Task EditRow(STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden args)
         {
-            await DialogService.OpenAsync<EditGemeinden>("Edit Gemeinden", new Dictionary<string, object> { {"GemeindeNr", args.GemeindeNr} });
+            isEdit = true;
+            gemeinden = args;
         }
 
         protected async Task GridDeleteButtonClick(MouseEventArgs args, STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden gemeinden)
@@ -68,7 +72,7 @@ namespace STAVerwaltung.Pages
 
                     if (deleteResult != null)
                     {
-                        await grid0.Reload();
+                        await gridGemeinden.Reload();
                     }
                 }
             }
@@ -82,35 +86,36 @@ namespace STAVerwaltung.Pages
                 });
             }
         }
+        protected bool errorVisible;
+        protected STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden gemeinden;
 
-        protected async System.Threading.Tasks.Task DataGrid0Filter(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
-        {
-            SetCountGemeinden();
-        }
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Bundeslaender> bundeslaenderForBundeslandCode;
 
-        protected async System.Threading.Tasks.Task DataGrid0FilterCleared(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
-        {
-            SetCountGemeinden();
-        }
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.GemeindenArten> gemeindenArtenForGemeindeArt;
 
-        protected void SetCountGemeinden()
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.LKZ> lKZForLKZ;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Organisationen> organisationenForOrganisationCode;
+
+        [Inject]
+        protected SecurityService Security { get; set; }
+
+        protected async Task FormSubmit()
         {
-            if (grid0 == null)
+            try
             {
-                strCountGemeinden = gemeinden.Count().ToString();
-            } else {
-                if (gemeinden.Count() == grid0.View.Count())
-                {
-                    strCountGemeinden = gemeinden.Count().ToString();
-                } else {
-                    strCountGemeinden = grid0.View.Count().ToString() + " (Filter)";
-                }
+                var result = isEdit ? await dbSTAVerwaltungService.UpdateGemeinden(gemeinden.GemeindeNr, gemeinden) : await dbSTAVerwaltungService.CreateGemeinden(gemeinden);
+
+            }
+            catch (Exception ex)
+            {
+                errorVisible = true;
             }
         }
 
-        protected async System.Threading.Tasks.Task Button1Click(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        protected async Task CancelButtonClick(MouseEventArgs args)
         {
-            await DialogService.OpenAsync<OrganisationenTest>("Organisationen Test", null, new DialogOptions { Resizable = true, Draggable = true, CloseDialogOnOverlayClick = true });
+
         }
     }
 }

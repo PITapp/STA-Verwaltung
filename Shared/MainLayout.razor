@@ -22,13 +22,13 @@
             <RadzenColumn Size="7">
                 <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal"
                     JustifyContent="JustifyContent.End">
-                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" IsBusy="false"
-                        Click="@ButtonAufgabenClick">
-                        <RadzenIcon Icon="add_task" Style="font-size: 24px"></RadzenIcon>
-                    </RadzenButton>
                     <RadzenButton Click="@ButtonDashboardClick"
                         Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
                         <RadzenIcon Icon="dashboard" Style="font-size: 24px"></RadzenIcon>
+                    </RadzenButton>
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" IsBusy="false"
+                        Click="@ButtonAufgabenClick">
+                        <RadzenIcon Icon="notifications" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
                     <RadzenButton Click="@(() => rightSidebarExpanded = !rightSidebarExpanded)"
                         Style="height: 48px; font-size: 24px; padding: 0px">
@@ -36,8 +36,9 @@
                             <RadzenLabel Text="@Security.User?.Name"
                                 Style="font-size: 14px; font-weight: normal; margin-left: 16px" />
                             <RadzenImage Path="images\KeinBildPerson.png"
-                                Style="width: 32px; height: 32px; border-radius: 50%; margin-left: 8px; margin-right: 16px">
+                                Style="width: 32px; height: 32px; border-radius: 50%; margin-left: 8px; margin-right: 8px">
                             </RadzenImage>
+                            <RadzenIcon Icon="expand_more" Style="font-size: 24px; margin-right: 16px"></RadzenIcon>
                         </ChildContent>
                     </RadzenButton>
                 </RadzenStack>
@@ -47,7 +48,12 @@
 
     <!-- Sidebar links -->
     <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative"  Responsive="false">
-        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px" Click="@PanelMenu0Click">
+        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px; margin-top: 16px" Click="@PanelMenu0Click">
+            <RadzenPanelMenuItem Text="@Security.User.Name" Style="font-size: 12px" Icon="account_circle">
+                <RadzenPanelMenuItem Text="Meine Profil" Icon="how_to_reg"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Nachrichten" Icon="message"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new"></RadzenPanelMenuItem>
+            </RadzenPanelMenuItem>
             <RadzenPanelMenuItem Text="Dashboard" Path="dashboard" Icon="dashboard" />
             <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="navigate_next"></RadzenPanelMenuItem>
             <RadzenPanelMenuItem Text="Gemeinden" Path="gemeinden" Icon="navigate_next"></RadzenPanelMenuItem>
@@ -97,6 +103,9 @@
 
     <!-- Sidebar rechts -->
     <RadzenSidebar @bind-Expanded="@rightSidebarExpanded" Style="width: 300px; grid-area: rz-right-sidebar;" Responsive="false">
+        <RadzenTabs>
+            <Tabs>
+                <RadzenTabsItem Text="Einstellungen">
         <RadzenStack Orientation="Radzen.Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem"
             Class="rz-p-4">
             <RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
@@ -108,10 +117,23 @@
                 <RadzenSwitch @bind-Value="MenüBeimÖffnenAnzeigen" />
             </RadzenStack>
             <RadzenStack Gap="0.5rem" Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.SpaceBetween">
-                <RadzenLabel Text="Menü nach der Auswahl schließen:" />
+                <RadzenLabel Text="Menü bei Auswahl schließen:" />
                 <RadzenSwitch @bind-Value="MenüNachAuswahlSchließen" />
             </RadzenStack>
         </RadzenStack>
+
+        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px; margin-top: 32px" Click="@PanelMenu0Click">
+            <RadzenPanelMenuItem Text="Meine Einstellungen" Path="MeineEinstellungen" Icon="settings_applications" />
+            <RadzenPanelMenuItem Text="Lernvideos" Path="Lernvideos" Icon="video_library" />
+            <RadzenPanelMenuItem Text="Kennwort ändern" Path="KennwortÄndern" Icon="lock_open"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new" Click="@PanelMenuIAbmeldenClick"></RadzenPanelMenuItem>
+        </RadzenPanelMenu>
+                
+                </RadzenTabsItem>
+                <RadzenTabsItem Text="Aufgaben"></RadzenTabsItem>
+                <RadzenTabsItem Text="Hilfe"></RadzenTabsItem>
+            </Tabs>
+        </RadzenTabs>
     </RadzenSidebar>
 </RadzenLayout>
 
