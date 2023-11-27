@@ -38,7 +38,7 @@ namespace STAVerwaltung.Shared
 
         protected async System.Threading.Tasks.Task ButtonDashboardClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
         {
-            NavigationManager.NavigateTo($"/dashboard");
+            NavigationManager.NavigateTo($"/");
         }
 
         protected async System.Threading.Tasks.Task ButtonAufgabenClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
@@ -46,7 +46,7 @@ namespace STAVerwaltung.Shared
             await DialogService.OpenAsync<Aufgaben>("Aufgaben", null, new DialogOptions { Resizable = true, Draggable = true });
         }
 
-        protected async System.Threading.Tasks.Task PanelMenu0Click(Radzen.MenuItemEventArgs args)
+        protected async System.Threading.Tasks.Task PanelMenuClick(Radzen.MenuItemEventArgs args)
         {
             if (args.Path != null)
             {

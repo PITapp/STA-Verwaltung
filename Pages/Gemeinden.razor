@@ -21,81 +21,11 @@
         </RadzenColumn>
     </RadzenRow>
 
-<RadzenTabs Style="padding-left: 5px" RenderMode="Radzen.TabRenderMode.Client">
+<RadzenTabs Style="padding-left: 5px" SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem Text="Karte">
     <RadzenRow>
       <RadzenColumn SizeMD=6>
-     <RadzenCard style="height: 100%">
-        <RadzenDataGrid @ref="gridGemeinden" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30})
-            Data="@tabGemeinden" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" RowSelect="@EditRow">
-            <Columns>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GemeindeNr" Title="Gemeinde Nr">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Titel" Title="Titel">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="ZuGemeindeNr" Title="Zu Gemeinde Nr">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Kürzel" Title="Kürzel">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Straße" Title="Straße">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="PLZ" Title="P L Z">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Ort" Title="Ort">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Telefon" Title="Telefon">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="EMail" Title="E Mail">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Internet" Title="Internet">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GegründetAm" Title="Gegründet Am">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AufgelöstAm" Title="Aufgelöst Am">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AuflösungInfo" Title="Auflösung Info">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Bezirk" Title="Bezirk">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Großbezirk" Title="Großbezirk">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Sprachen" Title="Sprachen">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Wegbeschreibung" Title="Wegbeschreibung">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GesprächsleitervorbereitungTag" Title="Gesprächsleitervorbereitung Tag">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GesprächsleitervorbereitungZeit" Title="Gesprächsleitervorbereitung Zeit">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GottesdienstZeit" Title="Gottesdienst Zeit">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AndachtTag" Title="Andacht Tag">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AndachtZeit" Title="Andacht Zeit">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Info" Title="Info">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Bundeslaender.Titel" Title="Bundeslaender">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GemeindenArten.Titel" Title="Gemeinden Arten">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="LKZ1.TitelEnglisch" Title="L K Z1">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Organisationen.Info" Title="Organisationen">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Filterable="false" Sortable="false" Width="70px" TextAlign="TextAlign.Center">
-                    <Template Context="gemeinden">
-
-                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Size="ButtonSize.Medium"
-                            Shade="Shade.Lighter" Variant="Variant.Flat"
-                            Click=@(args => GridDeleteButtonClick(args, gemeinden)) @onclick:stopPropagation="true" />
-                    </Template>
-                </RadzenDataGridColumn>
-            </Columns>
-
-        </RadzenDataGrid>
-    </RadzenCard>
 
     </RadzenColumn>
         <RadzenColumn SizeMD=6>
@@ -253,7 +183,68 @@
         
         
         </RadzenTabsItem>
-        <RadzenTabsItem Text="Tabelle"></RadzenTabsItem>
+        <RadzenTabsItem Text="Tabelle">
+<RadzenCard style="height: 100%">
+        <RadzenDataGrid @ref="gridGemeinden" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="false" AllowSorting="true" Data="@tabGemeinden" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" RowSelect="@EditRow" AllowVirtualization="true" Style="height: 500px" Filter="@DataGrid0Filter" FilterCleared="@DataGrid0FilterCleared">
+            <Columns>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Titel" Title="Titel">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="ZuGemeindeNr" Title="Zu Gemeinde Nr">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Kürzel" Title="Kürzel">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Straße" Title="Straße">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="PLZ" Title="P L Z">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Ort" Title="Ort">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Telefon" Title="Telefon">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="EMail" Title="E Mail">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Internet" Title="Internet">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GegründetAm" Title="Gegründet Am">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AufgelöstAm" Title="Aufgelöst Am">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AuflösungInfo" Title="Auflösung Info">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Bezirk" Title="Bezirk">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Großbezirk" Title="Großbezirk">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Sprachen" Title="Sprachen">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Wegbeschreibung" Title="Wegbeschreibung">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GesprächsleitervorbereitungTag" Title="Gesprächsleitervorbereitung Tag">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GesprächsleitervorbereitungZeit" Title="Gesprächsleitervorbereitung Zeit">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GottesdienstZeit" Title="Gottesdienst Zeit">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AndachtTag" Title="Andacht Tag">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="AndachtZeit" Title="Andacht Zeit">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Info" Title="Info">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Bundeslaender.Titel" Title="Bundeslaender">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="GemeindenArten.Titel" Title="Gemeinden Arten">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="LKZ1.TitelEnglisch" Title="L K Z1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Property="Organisationen.Info" Title="Organisationen">
+                </RadzenDataGridColumn>
+            </Columns>
+
+        </RadzenDataGrid>
+         <RadzenTextBox Value="@strCountGemeinden"></RadzenTextBox>
+    </RadzenCard>        
+        </RadzenTabsItem>
         <RadzenTabsItem Text="Personen"></RadzenTabsItem>
         <RadzenTabsItem Text="Gebiete"></RadzenTabsItem>
         <RadzenTabsItem Text="Statistik"></RadzenTabsItem>

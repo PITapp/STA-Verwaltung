@@ -37,6 +37,9 @@ namespace STAVerwaltung.Pages
 
         protected RadzenDataGrid<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> gridGemeinden;
         protected bool isEdit = true;
+
+        string strCountGemeinden;
+
         protected override async Task OnInitializedAsync()
         {
             tabGemeinden = await dbSTAVerwaltungService.GetGemeinden(new Query { Expand = "Bundeslaender,GemeindenArten,LKZ1,Organisationen" });
@@ -48,6 +51,10 @@ namespace STAVerwaltung.Pages
             lKZForLKZ = await dbSTAVerwaltungService.GetLKZ();
 
             organisationenForOrganisationCode = await dbSTAVerwaltungService.GetOrganisationen();
+
+            gemeinden = await dbSTAVerwaltungService.GetGemeindenByGemeindeNr(200553);
+
+            SetCountGemeinden();
         }
 
         protected async Task AddButtonClick(MouseEventArgs args)
@@ -116,6 +123,31 @@ namespace STAVerwaltung.Pages
         protected async Task CancelButtonClick(MouseEventArgs args)
         {
 
+        }
+
+        protected async System.Threading.Tasks.Task DataGrid0Filter(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
+        {
+            SetCountGemeinden();
+        }
+
+        protected async System.Threading.Tasks.Task DataGrid0FilterCleared(Radzen.DataGridColumnFilterEventArgs<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> args)
+        {
+            SetCountGemeinden();
+        }
+
+        protected void SetCountGemeinden()
+        {
+            if (gridGemeinden == null)
+            {
+                strCountGemeinden = tabGemeinden.Count().ToString();
+            } else {
+                if (tabGemeinden.Count() == gridGemeinden.View.Count())
+                {
+                    strCountGemeinden = tabGemeinden.Count().ToString();
+                } else {
+                    strCountGemeinden = gridGemeinden.View.Count().ToString() + " (Filter)";
+                }
+            }
         }
     }
 }
