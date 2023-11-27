@@ -1,0 +1,99 @@
+@page "/personen"
+
+@attribute [Authorize]
+
+<PageTitle>Personen</PageTitle>
+<RadzenStack>
+    <RadzenRow AlignItems="AlignItems.Center">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Adressen" TextStyle="TextStyle.H3" TagName="TagName.H1" style="margin: 0" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                <RadzenButton Icon="add_circle_outline" Text="Add" Click="@AddButtonClick" Variant="Variant.Flat" />
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow>
+      <RadzenColumn SizeMD=12>
+        <RadzenDataGrid @ref="gridAdressen" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowSorting="true" Data="@tabAdressen" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" RowSelect="@EditRow" AllowVirtualization="true" Style="height: 1000px">
+            <Columns>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressNr" Title="Adress Nr">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressArtFrueher" Title="Adress Art Frueher">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name1" Title="Name1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name2" Title="Name2">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name1Frueher" Title="Name1 Frueher">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="WeitereVornamen" Title="Weitere Vornamen">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Namenszusatz" Title="Namenszusatz">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Titel" Title="Titel">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Staatsbuergerschaft1" Title="Staatsbuergerschaft1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Staatsbuergerschaft2" Title="Staatsbuergerschaft2">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Strasse" Title="Strasse">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Zusatz" Title="Zusatz">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="PLZ" Title="P L Z">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Ort" Title="Ort">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Geburtsdatum" Title="Geburtsdatum">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Taufdatum" Title="Taufdatum">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Hochzeitsdatum" Title="Hochzeitsdatum">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Sterbedatum" Title="Sterbedatum">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Telefon1" Title="Telefon1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Telefon2" Title="Telefon2">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Mobil1" Title="Mobil1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Mobil2" Title="Mobil2">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Skype" Title="Skype">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="EMail1" Title="E Mail1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="EMail2" Title="E Mail2">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Fax" Title="Fax">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Internet" Title="Internet">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="NotizKommunikation" Title="Notiz Kommunikation">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Notiz" Title="Notiz">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenArten.TitelMehrzahl" Title="Adressen Arten">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenAnreden.Titel" Title="Adressen Anreden">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Bundeslaender.Titel" Title="Bundeslaender">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenFamilienstaende.Kurzzeichen" Title="Adressen Familienstaende">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Gemeinden.Info" Title="Gemeinden">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenGeschlechter.Titel" Title="Adressen Geschlechter">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="LKZ1.TitelEnglisch" Title="L K Z1">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenSortierungFamilie.Titel" Title="Adressen Sortierung Familie">
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenColumn>
+  </RadzenRow>
+</RadzenStack>

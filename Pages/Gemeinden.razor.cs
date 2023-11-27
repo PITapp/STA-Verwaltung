@@ -140,11 +140,15 @@ namespace STAVerwaltung.Pages
             if (gridGemeinden == null)
             {
                 strCountGemeinden = tabGemeinden.Count().ToString();
-            } else {
+            }
+            else
+            {
                 if (tabGemeinden.Count() == gridGemeinden.View.Count())
                 {
                     strCountGemeinden = tabGemeinden.Count().ToString();
-                } else {
+                }
+                else
+                {
                     strCountGemeinden = gridGemeinden.View.Count().ToString() + " (Filter)";
                 }
             }

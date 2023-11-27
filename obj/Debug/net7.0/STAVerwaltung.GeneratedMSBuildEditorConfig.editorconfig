@@ -90,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JnYW5pc2F0aW9uZW5UZXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Personen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Verbände.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyYsOkbmRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Vereinigungen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyZWluaWd1bmdlbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/_Imports.razor]
