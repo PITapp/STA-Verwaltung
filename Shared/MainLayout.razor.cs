@@ -57,7 +57,7 @@ namespace STAVerwaltung.Shared
             }
         }
 
-        protected async System.Threading.Tasks.Task PanelMenuIAbmeldenClick(Radzen.MenuItemEventArgs args)
+        protected async System.Threading.Tasks.Task PanelMenuAbmeldenClick(Radzen.MenuItemEventArgs args)
         {
             Security.Logout();
         }

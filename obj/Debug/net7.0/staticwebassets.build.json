@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ly8xBuqyMsDmWGUxTKIw00sybnuImS2prDkIsrmI1hM=",
+  "Hash": "KnQOZI+itCzxbeZxpssaaET3/c/j3wpiYgx/kAIFzDU=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -566,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Dashboard01.png"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Dashboard02.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/Dashboard02.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Dashboard02.png"
     },
     {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\KeinBildPerson.png",

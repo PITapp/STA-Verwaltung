@@ -50,9 +50,9 @@
     <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative"  Responsive="false">
         <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px; margin-top: 16px" Click="@PanelMenuClick">
             <RadzenPanelMenuItem Text="@Security.User.Name" Style="font-size: 11px" Icon="account_circle">
-                <RadzenPanelMenuItem Text="Meine Profil" Icon="how_to_reg"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Nachrichten" Icon="message"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Mein Profil" Path="meinprofil" Icon="how_to_reg"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Nachrichten" Path="nachrichten" Icon="message"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new" Click="@PanelMenuAbmeldenClick"></RadzenPanelMenuItem>
             </RadzenPanelMenuItem>
             <RadzenPanelMenuItem Text="Dashboard" Path="/" Icon="dashboard" />
             <RadzenPanelMenuItem Text="Personen" Path="personen" Icon="arrow_right"></RadzenPanelMenuItem>
@@ -125,7 +125,7 @@
             <RadzenPanelMenuItem Text="Meine Einstellungen" Path="MeineEinstellungen" Icon="settings_applications" />
             <RadzenPanelMenuItem Text="Lernvideos" Path="Lernvideos" Icon="video_library" />
             <RadzenPanelMenuItem Text="Kennwort ändern" Path="KennwortÄndern" Icon="lock_open"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new" Click="@PanelMenuIAbmeldenClick"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new" Click="@PanelMenuAbmeldenClick"></RadzenPanelMenuItem>
         </RadzenPanelMenu>
                 
                 </RadzenTabsItem>

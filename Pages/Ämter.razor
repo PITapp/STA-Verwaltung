@@ -1,0 +1,41 @@
+@page "/ämter"
+
+@attribute [Authorize]
+
+<PageTitle>Ämter</PageTitle>
+<RadzenStack Gap="0">
+    <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
+        Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #AFAFAF">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Ämter" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
+                style="margin: 0; color: #818181" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
+                JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Suchen</span>
+                </RadzenButton>
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Drucken</span>
+                </RadzenButton>
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+</RadzenStack>
+<RadzenRow Style="margin-top: 100px">
+    <RadzenColumn>
+        <RadzenText Text="Modul in Arbeit" TextAlign="Radzen.TextAlign.Center" TextStyle="Radzen.Blazor.TextStyle.H4" />
+       </RadzenColumn>
+</RadzenRow>
+
+<RadzenRow Style="margin-top: 30px">
+    <RadzenColumn>
+    <RadzenStack JustifyContent="Radzen.JustifyContent.Center" Orientation="Radzen.Orientation.Horizontal">
+    <RadzenImage Path="images\App in Arbeit.png" Style="width: 1000px"></RadzenImage>
+    
+    </RadzenStack>
+       </RadzenColumn>
+</RadzenRow>

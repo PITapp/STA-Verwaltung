@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\images\\Dashboard01.png"
     },
     {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Dashboard02.png",
+      "PackagePath": "staticwebassets\\images\\Dashboard02.png"
+    },
+    {
       "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\KeinBildPerson.png",
       "PackagePath": "staticwebassets\\images\\KeinBildPerson.png"
     },
