@@ -49,7 +49,7 @@
     <!-- Sidebar links -->
     <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative"  Responsive="false">
         <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px; margin-top: 16px" Click="@PanelMenuClick">
-            <RadzenPanelMenuItem Text="@Security.User.Name" Style="font-size: 12px" Icon="account_circle">
+            <RadzenPanelMenuItem Text="@Security.User.Name" Style="font-size: 11px" Icon="account_circle">
                 <RadzenPanelMenuItem Text="Meine Profil" Icon="how_to_reg"></RadzenPanelMenuItem>
                 <RadzenPanelMenuItem Text="Nachrichten" Icon="message"></RadzenPanelMenuItem>
                 <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new"></RadzenPanelMenuItem>
@@ -80,9 +80,8 @@
         </RadzenPanelMenu>
         <!-- Sidebar links Fußzeile -->
         <div style="position: absolute; left: 0px; bottom: 0px; width: 100%">
-            <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6"
-                Style="padding: var(--rz-panel-menu-item-padding);">
-                <RadzenText Text="STA-Verwaltung · Version 1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption"
+            <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6">
+                <RadzenText Text="Version 1.7.3" TextStyle="Radzen.Blazor.TextStyle.Caption"
                     style="color: var(--rz-text-disabled-color);" TagName="Radzen.Blazor.TagName.P"
                     TextAlign="Radzen.TextAlign.Center" />
                 <RadzenText Text="Powered by PITapp" TextStyle="Radzen.Blazor.TextStyle.Caption" class="rz-mb-0"
