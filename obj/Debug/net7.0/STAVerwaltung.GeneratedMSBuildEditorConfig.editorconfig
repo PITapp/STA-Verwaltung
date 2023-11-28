@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddAdressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQWRyZXNzZW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddApplicationRole.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXBwbGljYXRpb25Sb2xlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddGemeinden.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkR2VtZWluZGVuLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Adressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRyZXNzZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/ApplicationRoles.razor]
@@ -60,10 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Dienstbericht.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbnN0YmVyaWNodC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/EditAdressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFkcmVzc2VuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/EditApplicationUser.razor]

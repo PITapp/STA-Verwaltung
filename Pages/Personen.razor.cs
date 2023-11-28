@@ -31,29 +31,54 @@ namespace STAVerwaltung.Pages
         protected NotificationService NotificationService { get; set; }
 
         [Inject]
-        protected SecurityService Security { get; set; }
-
-        [Inject]
         public dbSTAVerwaltungService dbSTAVerwaltungService { get; set; }
 
         protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Adressen> tabAdressen;
 
         protected RadzenDataGrid<STAVerwaltung.Models.dbSTAVerwaltung.Adressen> gridAdressen;
+        protected bool isEdit = true;
 
+        protected string search = "";
+
+        protected async Task Search(ChangeEventArgs args)
+        {
+            search = $"{args.Value}";
+
+            await gridAdressen.GoToPage(0);
+
+            tabAdressen = await dbSTAVerwaltungService.GetAdressen(new Query { Filter = $@"i => i.AdressArt.Contains(@0) || i.AdressArtFrueher.Contains(@0) || i.AnredeCode.Contains(@0) || i.Name1.Contains(@0) || i.Name2.Contains(@0) || i.Name1Frueher.Contains(@0) || i.WeitereVornamen.Contains(@0) || i.Namenszusatz.Contains(@0) || i.Geschlecht.Contains(@0) || i.Titel.Contains(@0) || i.Staatsbuergerschaft1.Contains(@0) || i.Staatsbuergerschaft2.Contains(@0) || i.FamilienstandCode.Contains(@0) || i.Strasse.Contains(@0) || i.Zusatz.Contains(@0) || i.PLZ.Contains(@0) || i.Ort.Contains(@0) || i.LKZ.Contains(@0) || i.BundeslandCode.Contains(@0) || i.Telefon1.Contains(@0) || i.Telefon2.Contains(@0) || i.Mobil1.Contains(@0) || i.Mobil2.Contains(@0) || i.Skype.Contains(@0) || i.EMail1.Contains(@0) || i.EMail2.Contains(@0) || i.Fax.Contains(@0) || i.Internet.Contains(@0) || i.NotizKommunikation.Contains(@0) || i.Notiz.Contains(@0)", FilterParameters = new object[] { search }, Expand = "AdressenArten,AdressenAnreden,Bundeslaender,AdressenFamilienstaende,Gemeinden,AdressenGeschlechter,LKZ1,AdressenSortierungFamilie" });
+        }
         protected override async Task OnInitializedAsync()
         {
-            tabAdressen = await dbSTAVerwaltungService.GetAdressen(new Query { Expand = "AdressenArten,AdressenAnreden,Bundeslaender,AdressenFamilienstaende,Gemeinden,AdressenGeschlechter,LKZ1,AdressenSortierungFamilie" });
+            tabAdressen = await dbSTAVerwaltungService.GetAdressen(new Query { Filter = $@"i => i.AdressArt.Contains(@0) || i.AdressArtFrueher.Contains(@0) || i.AnredeCode.Contains(@0) || i.Name1.Contains(@0) || i.Name2.Contains(@0) || i.Name1Frueher.Contains(@0) || i.WeitereVornamen.Contains(@0) || i.Namenszusatz.Contains(@0) || i.Geschlecht.Contains(@0) || i.Titel.Contains(@0) || i.Staatsbuergerschaft1.Contains(@0) || i.Staatsbuergerschaft2.Contains(@0) || i.FamilienstandCode.Contains(@0) || i.Strasse.Contains(@0) || i.Zusatz.Contains(@0) || i.PLZ.Contains(@0) || i.Ort.Contains(@0) || i.LKZ.Contains(@0) || i.BundeslandCode.Contains(@0) || i.Telefon1.Contains(@0) || i.Telefon2.Contains(@0) || i.Mobil1.Contains(@0) || i.Mobil2.Contains(@0) || i.Skype.Contains(@0) || i.EMail1.Contains(@0) || i.EMail2.Contains(@0) || i.Fax.Contains(@0) || i.Internet.Contains(@0) || i.NotizKommunikation.Contains(@0) || i.Notiz.Contains(@0)", FilterParameters = new object[] { search }, Expand = "AdressenArten,AdressenAnreden,Bundeslaender,AdressenFamilienstaende,Gemeinden,AdressenGeschlechter,LKZ1,AdressenSortierungFamilie" });
+
+            adressenArtenForAdressArt = await dbSTAVerwaltungService.GetAdressenArten();
+
+            adressenAnredenForAnredeCode = await dbSTAVerwaltungService.GetAdressenAnreden();
+
+            bundeslaenderForBundeslandCode = await dbSTAVerwaltungService.GetBundeslaender();
+
+            adressenFamilienstaendeForFamilienstandCode = await dbSTAVerwaltungService.GetAdressenFamilienstaende();
+
+            gemeindenForGemeindeNr = await dbSTAVerwaltungService.GetGemeinden();
+
+            adressenGeschlechterForGeschlecht = await dbSTAVerwaltungService.GetAdressenGeschlechter();
+
+            lKZForLKZ = await dbSTAVerwaltungService.GetLKZ();
+
+            adressenSortierungFamilieForSortierungFamilie = await dbSTAVerwaltungService.GetAdressenSortierungFamilie();
         }
 
         protected async Task AddButtonClick(MouseEventArgs args)
         {
-            await DialogService.OpenAsync<AddAdressen>("Add Adressen", null);
-            await gridAdressen.Reload();
+            isEdit = false;
+            adressen = new STAVerwaltung.Models.dbSTAVerwaltung.Adressen();
         }
 
         protected async Task EditRow(STAVerwaltung.Models.dbSTAVerwaltung.Adressen args)
         {
-            await DialogService.OpenAsync<EditAdressen>("Edit Adressen", new Dictionary<string, object> { { "AdressNr", args.AdressNr } });
+            isEdit = true;
+            adressen = args;
         }
 
         protected async Task GridDeleteButtonClick(MouseEventArgs args, STAVerwaltung.Models.dbSTAVerwaltung.Adressen adressen)
@@ -79,6 +104,45 @@ namespace STAVerwaltung.Pages
                     Detail = $"Unable to delete Adressen"
                 });
             }
+        }
+        protected bool errorVisible;
+        protected STAVerwaltung.Models.dbSTAVerwaltung.Adressen adressen;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.AdressenArten> adressenArtenForAdressArt;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.AdressenAnreden> adressenAnredenForAnredeCode;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Bundeslaender> bundeslaenderForBundeslandCode;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.AdressenFamilienstaende> adressenFamilienstaendeForFamilienstandCode;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden> gemeindenForGemeindeNr;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.AdressenGeschlechter> adressenGeschlechterForGeschlecht;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.LKZ> lKZForLKZ;
+
+        protected IEnumerable<STAVerwaltung.Models.dbSTAVerwaltung.AdressenSortierungFamilie> adressenSortierungFamilieForSortierungFamilie;
+
+        [Inject]
+        protected SecurityService Security { get; set; }
+
+        protected async Task FormSubmit()
+        {
+            try
+            {
+                var result = isEdit ? await dbSTAVerwaltungService.UpdateAdressen(adressen.AdressNr, adressen) : await dbSTAVerwaltungService.CreateAdressen(adressen);
+
+            }
+            catch (Exception ex)
+            {
+                errorVisible = true;
+            }
+        }
+
+        protected async Task CancelButtonClick(MouseEventArgs args)
+        {
+
         }
     }
 }

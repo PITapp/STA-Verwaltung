@@ -1,46 +1,49 @@
 @page "/personen"
 
 @attribute [Authorize]
-
 <PageTitle>Personen</PageTitle>
-<RadzenStack>
-    <RadzenRow AlignItems="AlignItems.Center">
+
+<RadzenStack Gap="0">
+    <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
+        Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #AFAFAF">
         <RadzenColumn Size="12" SizeMD="6">
-            <RadzenText Text="Adressen" TextStyle="TextStyle.H3" TagName="TagName.H1" style="margin: 0" />
+            <RadzenText Text="Personen" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
+                style="margin: 0; color: #818181" />
         </RadzenColumn>
-        <RadzenColumn Size="12" SizeMD="6">
-            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
-                <RadzenButton Icon="add_circle_outline" Text="Add" Click="@AddButtonClick" Variant="Variant.Flat" />
+        <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
+                JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Suchen</span>
+                </RadzenButton>
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Drucken</span>
+                </RadzenButton>
             </RadzenStack>
         </RadzenColumn>
     </RadzenRow>
+</RadzenStack>
+
+<RadzenStack Gap="1rem">
+    <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 5px; padding-top: 5px">
+        <Tabs>
+            <RadzenTabsItem Text="Karte">
+
+<RadzenStack>
+    <RadzenTextBox Placeholder="Search ..." style="display: block; width: 100%" @oninput="@Search" />
     <RadzenRow>
-      <RadzenColumn SizeMD=12>
-        <RadzenDataGrid @ref="gridAdressen" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowSorting="true" Data="@tabAdressen" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" RowSelect="@EditRow" AllowVirtualization="true" Style="height: 1000px">
+      <RadzenColumn SizeMD=6>
+     <RadzenCard style="height: 100%">
+        <RadzenDataGrid @ref="gridAdressen" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30})
+            Data="@tabAdressen" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" RowSelect="@EditRow" PageSize="25">
             <Columns>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressNr" Title="Adress Nr">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressArtFrueher" Title="Adress Art Frueher">
-                </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name1" Title="Name1">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name2" Title="Name2">
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Name1Frueher" Title="Name1 Frueher">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="WeitereVornamen" Title="Weitere Vornamen">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Namenszusatz" Title="Namenszusatz">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Titel" Title="Titel">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Staatsbuergerschaft1" Title="Staatsbuergerschaft1">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Staatsbuergerschaft2" Title="Staatsbuergerschaft2">
-                </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Strasse" Title="Strasse">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Zusatz" Title="Zusatz">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="PLZ" Title="P L Z">
                 </RadzenDataGridColumn>
@@ -48,31 +51,11 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Geburtsdatum" Title="Geburtsdatum">
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Taufdatum" Title="Taufdatum">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Hochzeitsdatum" Title="Hochzeitsdatum">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Sterbedatum" Title="Sterbedatum">
-                </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Telefon1" Title="Telefon1">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Telefon2" Title="Telefon2">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Mobil1" Title="Mobil1">
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Mobil2" Title="Mobil2">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Skype" Title="Skype">
-                </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="EMail1" Title="E Mail1">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="EMail2" Title="E Mail2">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Fax" Title="Fax">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Internet" Title="Internet">
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="NotizKommunikation" Title="Notiz Kommunikation">
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="Notiz" Title="Notiz">
                 </RadzenDataGridColumn>
@@ -90,10 +73,170 @@
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="LKZ1.TitelEnglisch" Title="L K Z1">
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Property="AdressenSortierungFamilie.Titel" Title="Adressen Sortierung Familie">
-                </RadzenDataGridColumn>
             </Columns>
+
         </RadzenDataGrid>
+    </RadzenCard>
+
     </RadzenColumn>
-  </RadzenRow>
+        <RadzenColumn SizeMD=6>
+        <RadzenCard style="height: 100%;margin-top:0px;">
+            <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Adressen</RadzenAlert>
+            <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Adressen" Data="@adressen" Visible="@(adressen != null)" Submit="@FormSubmit">
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Name1" Component="Name1" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Name1" Name="Name1" />
+                        <RadzenRequiredValidator Component="Name1" Text="Name1 is required" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Name2" Component="Name2" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Name2" Name="Name2" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Strasse" Component="Strasse" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Strasse" Name="Strasse" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="P L Z" Component="PLZ" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.PLZ" Name="PLZ" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Ort" Component="Ort" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Ort" Name="Ort" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Geburtsdatum" Component="Geburtsdatum" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDatePicker DateFormat="dd.MM.yyyy" style="display: block; width: 100%" @bind-Value="@adressen.Geburtsdatum" Name="Geburtsdatum" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Telefon1" Component="Telefon1" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Telefon1" Name="Telefon1" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Mobil1" Component="Mobil1" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Mobil1" Name="Mobil1" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="E Mail1" Component="EMail1" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.EMail1" Name="EMail1" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Notiz" Component="Notiz" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenTextBox style="display: block; width: 100%" @bind-Value="@adressen.Notiz" Name="Notiz" />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Adressen Arten" Component="AdressenArten" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@adressenArtenForAdressArt" TextProperty="TitelMehrzahl" ValueProperty="AdressArt" AllowClear=true
+                             Placeholder="Choose AdressenArten" style="display: block; width: 100%" @bind-Value="@adressen.AdressArt" Name="AdressArt"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Adressen Anreden" Component="AdressenAnreden" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@adressenAnredenForAnredeCode" TextProperty="Titel" ValueProperty="AnredeCode" AllowClear=true
+                             Placeholder="Choose AdressenAnreden" style="display: block; width: 100%" @bind-Value="@adressen.AnredeCode" Name="AnredeCode"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Bundeslaender" Component="Bundeslaender" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@bundeslaenderForBundeslandCode" TextProperty="Titel" ValueProperty="BundeslandCode" AllowClear=true
+                             Placeholder="Choose Bundeslaender" style="display: block; width: 100%" @bind-Value="@adressen.BundeslandCode" Name="BundeslandCode"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Adressen Familienstaende" Component="AdressenFamilienstaende" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@adressenFamilienstaendeForFamilienstandCode" TextProperty="Kurzzeichen" ValueProperty="FamilienstandCode" AllowClear=true
+                             Placeholder="Choose AdressenFamilienstaende" style="display: block; width: 100%" @bind-Value="@adressen.FamilienstandCode" Name="FamilienstandCode"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Gemeinden" Component="Gemeinden" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@gemeindenForGemeindeNr" TextProperty="Info" ValueProperty="GemeindeNr" AllowClear=true
+                             Placeholder="Choose Gemeinden" style="display: block; width: 100%" @bind-Value="@adressen.GemeindeNr" Name="GemeindeNr"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+                <RadzenRow style="margin-bottom: 1rem">
+                    <RadzenColumn SizeMD="3">
+                        <RadzenLabel Text="Adressen Geschlechter" Component="AdressenGeschlechter" style="width: 100%" />
+                    </RadzenColumn>
+                    <RadzenColumn SizeMD="9">
+                        <RadzenDropDown Data="@adressenGeschlechterForGeschlecht" TextProperty="Titel" ValueProperty="Geschlecht" AllowClear=true
+                             Placeholder="Choose AdressenGeschlechter" style="display: block; width: 100%" @bind-Value="@adressen.Geschlecht" Name="Geschlecht"
+                               />
+                    </RadzenColumn>
+                </RadzenRow>
+              <RadzenStack  Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                        <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" Icon="save" Text="Save" Variant="Variant.Flat" />
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick" Visible=false />
+              </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenCard>
+        </RadzenColumn>  </RadzenRow>
+</RadzenStack>
+
+            </RadzenTabsItem>
+            <RadzenTabsItem Text="Tabelle"></RadzenTabsItem>
+            <RadzenTabsItem Text="Statistik"></RadzenTabsItem>
+        </Tabs>
+
+    </RadzenTabs>
 </RadzenStack>
