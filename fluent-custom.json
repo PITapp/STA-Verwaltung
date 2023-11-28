@@ -123,5 +123,7 @@
   "--rz-panel-menu-item-2nd-level-hover-background-color": "rgba(243, 242, 241, 0)",
   "--rz-panel-menu-item-2nd-level-active-background-color": "rgba(243, 242, 241, 0)",
   "--rz-panel-menu-item-2nd-level-active-color": "#00B7C3",
-  "--rz-panel-menu-item-2nd-level-color": "#818181"
+  "--rz-panel-menu-item-2nd-level-color": "#818181",
+  "--rz-panel-background-color": "#ffffff",
+  "--rz-panel-shadow": "0 0 0 1px rgba(0, 0, 0, 0.12)"
 }
