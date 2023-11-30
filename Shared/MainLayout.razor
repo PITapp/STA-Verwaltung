@@ -11,27 +11,29 @@
             <RadzenColumn Size="5" Style="height: 48px">
                 <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="Radzen.JustifyContent.Start"
                     AlignItems="Radzen.AlignItems.Center">
-                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px"
-                        Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)">
+                    <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" Click="@ButtonSidebarLeftClick"
+                       >
                         <RadzenIcon Icon="menu" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein - weis.png"
-                        Style="height: 32px; margin-left: 16px"></RadzenImage>
+                        <RadzenButton Style="height: 48px; font-size: 24px; padding: 0px; padding-left: 16px; padding-right: 16px" Click="@ImageSTAVerwaltungClick">
+                        <ChildContent>
+                                       <RadzenImage Path="images\Schriftzug STA-Verwaltung klein - weis.png"
+                        Style="height: 32px"></RadzenImage>  
+                        </ChildContent>
+                    </RadzenButton>
+
+                  
                 </RadzenStack>
             </RadzenColumn>
             <RadzenColumn Size="7">
                 <RadzenStack AlignItems="AlignItems.Center" Orientation="Orientation.Horizontal"
                     JustifyContent="JustifyContent.End">
-                    <RadzenButton Click="@ButtonDashboardClick"
-                        Style="width: 48px; height: 48px; font-size: 24px; padding: 0px">
-                        <RadzenIcon Icon="dashboard" Style="font-size: 24px"></RadzenIcon>
-                    </RadzenButton>
                     <RadzenButton Style="width: 48px; height: 48px; font-size: 24px; padding: 0px" IsBusy="false"
                         Click="@ButtonAufgabenClick">
                         <RadzenIcon Icon="notifications" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenButton Click="@(() => rightSidebarExpanded = !rightSidebarExpanded)"
-                        Style="height: 48px; font-size: 24px; padding: 0px">
+                    <RadzenButton
+                        Style="height: 48px; font-size: 24px; padding: 0px" Click="@ButtonSidebarRightClick">
                         <ChildContent>
                             <RadzenLabel Text="@Security.User?.Name"
                                 Style="font-size: 14px; font-weight: normal; margin-left: 16px" />
@@ -141,7 +143,7 @@
 @code {
     // Setze sidebarExpanded während der Bearbetung auf "true", damit du die Sidebar siehst und bearbeiten kannst!
     bool leftSidebarExpanded = true;
-    bool rightSidebarExpanded = true;
+    bool rightSidebarExpanded = false;
 
     bool MenüBeimÖffnenAnzeigen = true;
     bool MenüNachAuswahlSchließen = false;

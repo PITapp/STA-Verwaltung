@@ -37,6 +37,14 @@
                 elements[0].focus();
             }
         }
+        
+        window.removeFocus = (selector) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.blur();
+            }
+        
+        }
     </script>    
 
     <script src="_framework/blazor.server.js"></script>

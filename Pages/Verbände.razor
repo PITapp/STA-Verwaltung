@@ -30,18 +30,11 @@
     <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 5px; padding-top: 5px">
         <Tabs>
             <RadzenTabsItem Text="Allgemein">
-                @if (order == null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
-                    <RadzenRow Style="margin-left: -21px; margin-top: -21px; margin-right: -16px">
-                        <RadzenColumn Size="8">
+                <RadzenRow Style="margin-left: -21px; margin-top: -21px; margin-right: -16px">
+                    <RadzenColumn Size="9">
+                        <RadzenPanel Style="height: 700px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px; margin-top: 16px; margin-left: 16px" AllowCollapse="false">
 
-
-                    <RadzenTemplateForm Data="@order" Submit="@((Order args) => { Submit(args); })">
-
+                        <RadzenTemplateForm Data="@order" Submit="@((Order args) => { Submit(args); })">
                         <RadzenRow Gap="1rem" Class="rz-p-0 rz-p-lg-4"
                             Style="padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding: 0px">
                             <RadzenColumn Size="12" SizeMD="6">
@@ -86,7 +79,7 @@
                                             </RadzenRow>
                                         </RadzenStack>
                                     </RadzenFieldset>
-                                    <RadzenFieldset Text="Contact Info" Style="height: 477px">
+                                    <RadzenFieldset Text="Contact Info" Style="height: 377px">
                                         <RadzenStack Gap="6px">
                                             <RadzenRow AlignItems="AlignItems.Center">
                                                 <RadzenColumn Size="12" SizeMD="4">
@@ -226,7 +219,7 @@
 
                                         </RadzenStack>
                                     </RadzenFieldset>
-                                    <RadzenFieldset Text="POS Info" Style="height: 477px">
+                                    <RadzenFieldset Text="POS Info" Style="height: 377px">
                                         <RadzenStack Gap="6px">
                                             <RadzenRow AlignItems="AlignItems.Center">
                                                 <RadzenColumn Size="12" SizeMD="3">
@@ -293,28 +286,25 @@
                             </RadzenColumn>
                         </RadzenRow>
 
-                    </RadzenTemplateForm>
+                        </RadzenTemplateForm>
 
+                        </RadzenPanel>
+                    </RadzenColumn>
 
-                        </RadzenColumn>
-
-                        <RadzenColumn Size="4" Style="margin-left: -16px; margin-top: 16px" >
-                            <RadzenFieldset Text="Infobox" Style="height: 700px">
-                            <RadzenTabs SelectedIndex="0"
-                                RenderMode="Radzen.TabRenderMode.Client" Style="margin-top: -24px; margin-left: -14px">
+                    <RadzenColumn Size="3" Style="margin-left: -16px; margin-top: 16px" >
+                        <RadzenPanel Style="height: 700px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px; margin-left: 16px" AllowCollapse="false">
+                            <RadzenTabs SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client" Style="margin-top: 8px; margin-left: 8px" >
                                 <Tabs>
                                     <RadzenTabsItem Text="Kontakte"></RadzenTabsItem>
                                     <RadzenTabsItem Text="Bankverbindungen"></RadzenTabsItem>
                                 </Tabs>
                             </RadzenTabs>
-</RadzenFieldset>
-                        </RadzenColumn>
-                    </RadzenRow>
-
-
-                }
+                        </RadzenPanel>
+                    </RadzenColumn>
+                </RadzenRow>
 
             </RadzenTabsItem>
+
             <RadzenTabsItem Text="Mitarbeiter"></RadzenTabsItem>
             <RadzenTabsItem Text="Statistik"></RadzenTabsItem>
         </Tabs>

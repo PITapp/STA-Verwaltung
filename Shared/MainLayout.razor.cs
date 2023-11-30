@@ -61,5 +61,29 @@ namespace STAVerwaltung.Shared
         {
             Security.Logout();
         }
+
+        protected async System.Threading.Tasks.Task ImageSTAVerwaltungClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            NavigationManager.NavigateTo($"/");
+
+            // Den Fokus vom Button entfernen
+            await JSRuntime.InvokeVoidAsync("removeFocus", "button:focus");
+        }
+
+        protected async System.Threading.Tasks.Task ButtonSidebarLeftClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            leftSidebarExpanded = !leftSidebarExpanded;
+
+            // Den Fokus vom Button entfernen
+            await JSRuntime.InvokeVoidAsync("removeFocus", "button:focus");
+        }
+
+        protected async System.Threading.Tasks.Task ButtonSidebarRightClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+        {
+            rightSidebarExpanded = !rightSidebarExpanded;
+
+            // Den Fokus vom Button entfernen
+            await JSRuntime.InvokeVoidAsync("removeFocus", "button:focus");
+        }
     }
 }
