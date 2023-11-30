@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddAdressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQWRyZXNzZW4ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddApplicationRole.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXBwbGljYXRpb25Sb2xlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/AddGemeinden.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkR2VtZWluZGVuLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Adressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRyZXNzZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/ApplicationRoles.razor]
@@ -58,8 +50,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/EditAdressen.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEFkcmVzc2VuLnJhem9y
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Dienstbericht.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGllbnN0YmVyaWNodC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/EditApplicationUser.razor]
@@ -70,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEdlbWVpbmRlbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Filter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Gemeinden.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtZWluZGVuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,8 +74,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Institutionen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdGl0dXRpb25lbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Kategorien.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2F0ZWdvcmllbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Konferenzen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS29uZmVyZW56ZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Losungen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9zdW5nZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Mitarbeiter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWl0YXJiZWl0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Organisationen.razor]
@@ -98,6 +114,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Quartalsberichte.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUXVhcnRhbHNiZXJpY2h0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Religionen.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVsaWdpb25lbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,8 +126,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRNZW51ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Statistik.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlzdGlrLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Unauthorized.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVW5hdXRob3JpemVkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Veranstaltungen.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyYW5zdGFsdHVuZ2VuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Verbände.razor]
@@ -118,8 +146,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVyZWluaWd1bmdlbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Verträge.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVydHLDpGdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Pages/Ämter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcw4RtdGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/AA Painsi/09 PITapp/Projekte/STA-Verwaltung/AppWeb/Shared/LoginLayout.razor]

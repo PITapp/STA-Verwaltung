@@ -3,31 +3,34 @@
 @attribute [Authorize]
 <PageTitle>Gemeinden</PageTitle>
 <RadzenStack Gap="0">
-    <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center" Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #e3e3e3;">
-      <RadzenColumn Size="12" SizeMD="6">
-        <RadzenText Text="Gemeinden" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1" style="margin: 0; color: #818181" />
-      </RadzenColumn>
-      <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
-        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
-          <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter" >
-            <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
-            <span class="rz-button-text">Suchen</span>
-          </RadzenButton>
-          <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter" >
-            <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
-            <span class="rz-button-text">Drucken</span>
-          </RadzenButton>
-        </RadzenStack>
-      </RadzenColumn>
+    <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
+        Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #dbdbdb">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Gemeinden · Bensheim-Auerbach" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
+                style="margin: 0; color: #535353" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
+                JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Suchen</span>
+                </RadzenButton>
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Drucken</span>
+                </RadzenButton>
+            </RadzenStack>
+        </RadzenColumn>
     </RadzenRow>
+</RadzenStack>
 
-  <RadzenTabs Style="padding-left: 5px" SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client">
-    <Tabs>
-      <RadzenTabsItem Text="Karte">
-        <RadzenRow>
-        <RadzenColumn SizeMD=12>
-          <RadzenCard style="height: 1000px; margin-top: 0px; max-height: 1000px" Variant="Radzen.Variant.Filled">
-            <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Gemeinden</RadzenAlert>
+<RadzenStack Gap="1rem">
+    <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 5px; padding-top: 5px">
+        <Tabs>
+            <RadzenTabsItem Text="Allgemein">
+                    <RadzenRow Style="margin-left: -21px; margin-top: -21px; margin-right: -16px">
+                        <RadzenColumn Size="8">
             <RadzenTemplateForm TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" Data="@gemeinden" Visible="@(gemeinden != null)" Submit="@FormSubmit">
               <RadzenStack>
                 <RadzenFormField Text="Titel" Variant="Variant.Text">
@@ -174,11 +177,47 @@
                         <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Variant="Variant.Flat" Click="@CancelButtonClick" Visible=false />
               </RadzenStack>
             </RadzenTemplateForm>
+
+
+                        </RadzenColumn>
+
+                        <RadzenColumn Size="4" Style="margin-left: -16px; margin-top: 16px" >
+                            <RadzenFieldset Text="Infobox" Style="height: 700px">
+                            <RadzenTabs SelectedIndex="0"
+                                RenderMode="Radzen.TabRenderMode.Client" Style="margin-top: -24px; margin-left: -14px">
+                                <Tabs>
+                                    <RadzenTabsItem Text="Kontakte"></RadzenTabsItem>
+                                    <RadzenTabsItem Text="Bankverbindungen"></RadzenTabsItem>
+                                </Tabs>
+                            </RadzenTabs>
+                        </RadzenFieldset>
+                        </RadzenColumn>
+                    </RadzenRow>
+
+
+                }
+
+            </RadzenTabsItem>
+            <RadzenTabsItem Text="Mitarbeiter"></RadzenTabsItem>
+            <RadzenTabsItem Text="Statistik"></RadzenTabsItem>
+        </Tabs>
+
+    </RadzenTabs>
+</RadzenStack>
+
+
+  <RadzenTabs Style="padding-left: 5px" SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client">
+    <Tabs>
+      <RadzenTabsItem Text="Allgemein">
+        <RadzenRow>
+        <RadzenColumn SizeMD=12>
+          <RadzenCard style="height: 1000px; margin-top: 0px; max-height: 1000px" Variant="Radzen.Variant.Filled">
+            <RadzenAlert Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small" AlertStyle="AlertStyle.Danger" Visible="@errorVisible">Cannot save Gemeinden</RadzenAlert>
         </RadzenCard>
         </RadzenColumn>
    </RadzenRow>
         </RadzenTabsItem>
-        <RadzenTabsItem Text="Tabelle">
+        <RadzenTabsItem Text="Liste">
           <RadzenCard style="height: 100%">
             <RadzenDataGrid @ref="gridGemeinden" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="false" AllowSorting="true" Data="@tabGemeinden" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Gemeinden" RowSelect="@EditRow" AllowVirtualization="true" Style="height: 500px" Filter="@DataGrid0Filter" FilterCleared="@DataGrid0FilterCleared">
             <Columns>
@@ -246,8 +285,7 @@
 
         <RadzenTabsItem Text="Personen"></RadzenTabsItem>
         <RadzenTabsItem Text="Gebiete"></RadzenTabsItem>
+        <RadzenTabsItem Text="Dokumente"></RadzenTabsItem>
         <RadzenTabsItem Text="Statistik"></RadzenTabsItem>
     </Tabs>
 </RadzenTabs>
-
-</RadzenStack>

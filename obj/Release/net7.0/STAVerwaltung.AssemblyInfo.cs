@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ad55f06ec7b7c6d40c2b00654c9a424a69ea031")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c44963b2262cfcdea241ff1b2468b5d3d74882b")]
 [assembly: System.Reflection.AssemblyProductAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyTitleAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

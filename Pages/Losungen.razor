@@ -1,0 +1,77 @@
+@page "/losungen"
+
+@attribute [Authorize]
+
+<PageTitle>Losungen</PageTitle>
+<RadzenStack>
+    <RadzenRow AlignItems="AlignItems.Center">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Losungen" TextStyle="TextStyle.H3" TagName="TagName.H1" style="margin: 0" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                <RadzenButton Icon="add_circle_outline" Text="Add" Click="@AddButtonClick" Variant="Variant.Flat" />
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenRow>
+      <RadzenColumn SizeMD=12>
+        <RadzenDataGrid @ref="grid0" ColumnWidth="200px"  AllowFiltering="true" FilterMode="FilterMode.Advanced" AllowPaging="true" AllowSorting="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30})
+            Data="@losungen" RowUpdate="@GridRowUpdate" RowCreate="@GridRowCreate" TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen">
+            <Columns>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Property="LosungDatum" Title="Losung Datum">
+                  <EditTemplate Context="losungen">
+                      <RadzenDatePicker DateFormat="dd/MM/yyyy" style="display: block; width: 100%" @bind-Value="@losungen.LosungDatum" Name="LosungDatum" />
+                      <RadzenRequiredValidator Component="LosungDatum" Text="LosungDatum is required" style="position: absolute;" />
+                  </EditTemplate>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Property="ATStelle" Title="A T Stelle">
+                  <EditTemplate Context="losungen">
+                      <RadzenTextBox style="display: block; width: 100%" @bind-Value="@losungen.ATStelle" Name="ATStelle" />
+                      <RadzenRequiredValidator Component="ATStelle" Text="ATStelle is required" style="position: absolute;" />
+                  </EditTemplate>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Property="ATText" Title="A T Text">
+                  <EditTemplate Context="losungen">
+                      <RadzenTextBox style="display: block; width: 100%" @bind-Value="@losungen.ATText" Name="ATText" />
+                      <RadzenRequiredValidator Component="ATText" Text="ATText is required" style="position: absolute;" />
+                  </EditTemplate>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Property="NTStelle" Title="N T Stelle">
+                  <EditTemplate Context="losungen">
+                      <RadzenTextBox style="display: block; width: 100%" @bind-Value="@losungen.NTStelle" Name="NTStelle" />
+                      <RadzenRequiredValidator Component="NTStelle" Text="NTStelle is required" style="position: absolute;" />
+                  </EditTemplate>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Property="NTText" Title="N T Text">
+                  <EditTemplate Context="losungen">
+                      <RadzenTextBox style="display: block; width: 100%" @bind-Value="@losungen.NTText" Name="NTText" />
+                      <RadzenRequiredValidator Component="NTText" Text="NTText is required" style="position: absolute;" />
+                  </EditTemplate>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="STAVerwaltung.Models.dbSTAVerwaltung.Losungen" Filterable="false" Sortable="false" Width="156px" TextAlign="TextAlign.Center">
+                    <EditTemplate Context="losungen">
+                        <RadzenButton Icon="check" ButtonStyle="ButtonStyle.Success" Variant="Variant.Flat" Size="ButtonSize.Medium"
+                            style="margin-top: 0.25rem; margin-right: 0.25rem; margin-bottom: 0.25rem"
+                            Click=@(args => SaveButtonClick(args, losungen)) @onclick:stopPropagation="true" />
+                        <RadzenButton Icon="close" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium"
+                            Click=@(args => CancelButtonClick(args, losungen)) @onclick:stopPropagation="true" />
+                    </EditTemplate>
+                    <Template Context="losungen">
+
+                        <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Variant="Variant.Flat" Size="ButtonSize.Medium"
+                            style="margin-top: 0.25rem; margin-right: 0.25rem; margin-bottom: 0.25rem"
+                            Click=@(args => EditButtonClick(args, losungen)) @onclick:stopPropagation="true" />
+
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Icon="delete" Size="ButtonSize.Medium"
+                            Shade="Shade.Lighter" Variant="Variant.Flat"
+                            Click=@(args => GridDeleteButtonClick(args, losungen)) @onclick:stopPropagation="true" />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+
+        </RadzenDataGrid>
+
+    </RadzenColumn>
+  </RadzenRow>
+</RadzenStack>

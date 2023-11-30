@@ -4,35 +4,35 @@
 
 <PageTitle>Vereinigungen</PageTitle>
 <RadzenStack Gap="0">
-  <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
-    Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #e3e3e3;">
-    <RadzenColumn Size="12" SizeMD="6">
-      <RadzenText Text="Vereinigungen" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
-        style="margin: 0; color: #818181" />
-    </RadzenColumn>
-    <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
-      <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
-        JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
-        <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
-          <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
-          <span class="rz-button-text">Suchen</span>
-        </RadzenButton>
-        <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
-          <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
-          <span class="rz-button-text">Drucken</span>
-        </RadzenButton>
-      </RadzenStack>
-    </RadzenColumn>
-  </RadzenRow>
+    <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
+        Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #dbdbdb">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenText Text="Vereinigungen" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
+                style="margin: 0; color: #535353" />
+        </RadzenColumn>
+        <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
+                JustifyContent="JustifyContent.End" Gap="0" Style="height: 100%">
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="search" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Suchen</span>
+                </RadzenButton>
+                <RadzenButton Variant="Radzen.Variant.Text" Style="height: 100%; font-size: 16px; font-weight: lighter">
+                    <RadzenIcon Icon="print" Style="font-size: 20px; margin-right: 5px"></RadzenIcon>
+                    <span class="rz-button-text">Drucken</span>
+                </RadzenButton>
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
 </RadzenStack>
 
 <RadzenStack Gap="1rem">
-  <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 15px">
+  <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 15px; padding-top: 1px">
     <Tabs>
-      <RadzenTabsItem Text="Karte">
+      <RadzenTabsItem Text="Allgemein">
         <RadzenRow Style="margin-left: -15px">
           <RadzenColumn Size="8">
-            <RadzenPanel Style="height: 800px" AllowCollapse="false">
+            <RadzenPanel Style="height: 700px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px" AllowCollapse="false">
               <div Class="rz-p-0 rz-p-md-12">
                 <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem"
                   Class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
@@ -92,9 +92,11 @@
           </RadzenColumn>
 
           <RadzenColumn Size="4">
-            <RadzenPanel Style="height: 800px">
+            <RadzenPanel Style="height: 700px">
               <RadzenTabs Style="padding-left: 5px" SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client">
                 <Tabs>
+                  <RadzenTabsItem Text="Gemeinden"></RadzenTabsItem>
+                  <RadzenTabsItem Text="Mitarbeiter"></RadzenTabsItem>
                   <RadzenTabsItem Text="Kontakte"></RadzenTabsItem>
                   <RadzenTabsItem Text="Bankverbindungen"></RadzenTabsItem>
                 </Tabs>
@@ -105,7 +107,7 @@
         </RadzenRow>
 
       </RadzenTabsItem>
-      <RadzenTabsItem Text="Tabelle"></RadzenTabsItem>
+      <RadzenTabsItem Text="Quartalsberichte"></RadzenTabsItem>
       <RadzenTabsItem Text="Statistik">
         <RadzenRow Style="margin-left: -15px">
           <RadzenColumn Size="8">

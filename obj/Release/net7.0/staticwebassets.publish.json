@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xMBQLHUpaiySj58Xsn14vJmV/sxRF71VU/leWo0sPsw=",
+  "Hash": "929IIPoInOnluRzpNCLae1PyQAfZQmjaZ8MDAuRxOPE=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -530,6 +530,25 @@
       "OriginalItemSpec": "wwwroot\\fonts\\SourceSansPro-SemiboldIt.woff"
     },
     {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\App in Arbeit.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/App in Arbeit.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\App in Arbeit.png"
+    },
+    {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Dashboard01.png",
       "SourceId": "STAVerwaltung",
       "SourceType": "Discovered",
@@ -547,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Dashboard01.png"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Dashboard02.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/Dashboard02.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Dashboard02.png"
     },
     {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\KeinBildPerson.png",

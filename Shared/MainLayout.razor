@@ -15,7 +15,7 @@
                         Click="@(() => leftSidebarExpanded = !leftSidebarExpanded)">
                         <RadzenIcon Icon="menu" Style="font-size: 24px"></RadzenIcon>
                     </RadzenButton>
-                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein.png"
+                    <RadzenImage Path="images\Schriftzug STA-Verwaltung klein - weis.png"
                         Style="height: 32px; margin-left: 16px"></RadzenImage>
                 </RadzenStack>
             </RadzenColumn>
@@ -48,34 +48,38 @@
 
     <!-- Sidebar links -->
     <RadzenSidebar @bind-Expanded="@leftSidebarExpanded" style="position: relative"  Responsive="false">
-        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px; margin-top: 16px" Click="@PanelMenuClick">
-            <RadzenPanelMenuItem Text="@Security.User.Name" Style="font-size: 11px" Icon="account_circle">
-                <RadzenPanelMenuItem Text="Mein Profil" Path="MeinProfil" Icon="how_to_reg"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Nachrichten" Path="Nachrichten" Icon="message"></RadzenPanelMenuItem>
-                <RadzenPanelMenuItem Text="Abmelden" Icon="power_settings_new" Click="@PanelMenuAbmeldenClick"></RadzenPanelMenuItem>
-            </RadzenPanelMenuItem>
+
+       <RadzenTabs Style="margin-top: 6px">
+            <Tabs>
+                <RadzenTabsItem Text="Auswahl">
+        <RadzenPanelMenu Style="font-weight: normal; padding-left: 3px; padding-right: 3px" Click="@PanelMenuClick">
             <RadzenPanelMenuItem Text="Dashboard" Path="/" Icon="dashboard" />
-            <RadzenPanelMenuItem Text="Personen" Path="Personen" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Gemeinden" Path="Gemeinden" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Verbände" Path="Verbände" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Institutionen" Path="Institutionen" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Kategorien" Path="Kategorien" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Ämter" Path="Ämter" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Dienstbericht" Path="Dienstbericht" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Verträge" Path="Verträge" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Filter" Path="Filter" Icon="arrow_right"></RadzenPanelMenuItem>
-            <RadzenPanelMenuItem Text="Statistik" Path="Statistik" Icon="arrow_right"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Personen" Path="Personen" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Gemeinden" Path="Gemeinden" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Path="Vereinigungen" Text="Vereinigungen" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verbände" Path="Verbände" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Institutionen" Path="Institutionen" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Kategorien" Path="Kategorien" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Ämter" Path="Ämter" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Quartalsberichte" Path="Quartalsberichte" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Veranstaltungen" Path="Veranstaltungen" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Konferenzen" Path="Konferenzen" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Mitarbeiter" Path="Mitarbeiter" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Dienstbericht" Path="Dienstbericht" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Verträge" Path="Verträge" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Filter" Path="Filter" Icon="link"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Statistik" Path="Statistik" Icon="link"></RadzenPanelMenuItem>
             <RadzenPanelMenuItem Text="Einstellungen" Icon="settings">
-                <RadzenPanelMenuItem Text="Benutzer" Path="Benutzer" Icon="supervisor_account"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Benutzer" Path="add-application-user" Icon="supervisor_account"></RadzenPanelMenuItem>
                 <RadzenPanelMenuItem Text="Stammdaten" Path="Stammdaten" Icon="backup_table"> </RadzenPanelMenuItem>
                 <RadzenPanelMenuItem Text="Duplikate" Path="Duplikate" Icon="read_more"></RadzenPanelMenuItem>
             </RadzenPanelMenuItem>
         </RadzenPanelMenu>
+                </RadzenTabsItem>
+                <RadzenTabsItem Text="Hilfe"></RadzenTabsItem>
+            </Tabs>
+        </RadzenTabs>
+        
         <!-- Sidebar links Fußzeile -->
         <div style="position: absolute; left: 0px; bottom: 0px; width: 100%">
             <RadzenStack AlignItems="Radzen.AlignItems.Center" Gap="0" class="rz-py-4 rz-py-lg-6">
@@ -100,7 +104,7 @@
 
     <!-- Sidebar rechts -->
     <RadzenSidebar @bind-Expanded="@rightSidebarExpanded" Style="width: 300px; grid-area: rz-right-sidebar;" Responsive="false">
-        <RadzenTabs>
+        <RadzenTabs Style="margin-top: 6px">
             <Tabs>
                 <RadzenTabsItem Text="Einstellungen">
         <RadzenStack Orientation="Radzen.Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem"
@@ -128,7 +132,7 @@
                 
                 </RadzenTabsItem>
                 <RadzenTabsItem Text="Aufgaben"></RadzenTabsItem>
-                <RadzenTabsItem Text="Hilfe"></RadzenTabsItem>
+                <RadzenTabsItem Text="Links"></RadzenTabsItem>
             </Tabs>
         </RadzenTabs>
     </RadzenSidebar>
@@ -137,7 +141,7 @@
 @code {
     // Setze sidebarExpanded während der Bearbetung auf "true", damit du die Sidebar siehst und bearbeiten kannst!
     bool leftSidebarExpanded = true;
-    bool rightSidebarExpanded = false;
+    bool rightSidebarExpanded = true;
 
     bool MenüBeimÖffnenAnzeigen = true;
     bool MenüNachAuswahlSchließen = false;

@@ -125,6 +125,10 @@
       "PackagePath": "staticwebassets\\images\\KeinBildPerson.png"
     },
     {
+      "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein - weis.png",
+      "PackagePath": "staticwebassets\\images\\Schriftzug STA-Verwaltung klein - weis.png"
+    },
+    {
       "Id": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",
       "PackagePath": "staticwebassets\\images\\Schriftzug STA-Verwaltung klein.png"
     },
