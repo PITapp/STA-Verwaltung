@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c44963b2262cfcdea241ff1b2468b5d3d74882b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ec3a6d0db4de4e4705b0c9f9ebbbcdbd91c6fb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyTitleAttribute("STAVerwaltung")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
