@@ -70,5 +70,9 @@
   "--rz-on-danger-light": "#ffffff",
   "--rz-on-danger-lighter": "#7b1d21",
   "--rz-on-danger-dark": "#ffffff",
-  "--rz-on-danger-darker": "#ffffff"
+  "--rz-on-danger-darker": "#ffffff",
+  "--rz-input-placeholder-color": "#AFAFAF",
+  "--rz-panel-menu-icon-width": "1rem",
+  "--rz-panel-menu-icon-height": "1rem",
+  "--rz-panel-menu-icon-font-size": "1.5rem"
 }

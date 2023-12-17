@@ -31,7 +31,7 @@
     --rz-base-700: #616161;
     --rz-base-800: #323130;
     --rz-base-900: #201f1e;
-    --rz-primary: #1AC2D4;
+    --rz-primary: #6EC6D1;
     --rz-primary-light: #80dbe1;
     --rz-primary-lighter: #def6f7;
     --rz-primary-dark: #00a5b0;
@@ -149,6 +149,7 @@
     --rz-panel-menu-icon-2nd-level-margin: 0 0.625rem 0 -1.625rem;
     --rz-panel-menu-icon-2nd-level-icon-size: 1rem;
     --rz-panel-menu-font-weight: 300px;
+    --rz-panel-toggle-icon-border-radius: 2px;
 }
 
 body {
@@ -230,6 +231,10 @@ a:focus {
     padding-bottom: 5px;
 }
 
+/* ------- Diese Einstellung dient dazu, dass kein Scrollbar auf der rechten Seite kommt ------- */
+.rz-layout .rz-body {
+    overflow: hidden;
+}
 
 @keyframes slideInFromRight {
     from {
@@ -241,6 +246,7 @@ a:focus {
         transform: translateX(0);
     }
 }
+
 .slide-from-right {
     animation-duration: 1s; /* the duration of the animation */
     animation-timing-function: ease-out; /* how the animation will behave */

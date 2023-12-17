@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KnQOZI+itCzxbeZxpssaaET3/c/j3wpiYgx/kAIFzDU=",
+  "Hash": "DXFvEiWsBly0mM/+GtaJHRa03vecJsrq2ODWi4IWfTU=",
   "Source": "STAVerwaltung",
   "BasePath": "_content/STAVerwaltung",
   "Mode": "Default",
@@ -661,6 +661,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein - weis.png",
+      "SourceId": "STAVerwaltung",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\",
+      "BasePath": "_content/STAVerwaltung",
+      "RelativePath": "images/Schriftzug STA-Verwaltung klein - weis.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Schriftzug STA-Verwaltung klein - weis.png"
     },
     {
       "Identity": "C:\\AA Painsi\\09 PITapp\\Projekte\\STA-Verwaltung\\AppWeb\\wwwroot\\images\\Schriftzug STA-Verwaltung klein.png",

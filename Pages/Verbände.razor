@@ -7,7 +7,7 @@
     <RadzenRow AlignItems="AlignItems.Center" JustifyContent="Radzen.JustifyContent.Center"
         Style="height: 50px; padding-left: 16px; border-bottom: 1px dotted #dbdbdb">
         <RadzenColumn Size="12" SizeMD="6">
-            <RadzenText Text="Verbände" TextStyle="Radzen.Blazor.TextStyle.H4" TagName="TagName.H1"
+            <RadzenText Text="Verbände" TextStyle="Radzen.Blazor.TextStyle.H5" TagName="Radzen.Blazor.TagName.H1"
                 style="margin: 0; color: #535353" />
         </RadzenColumn>
         <RadzenColumn Size="12" SizeMD="6" Style="height: 100%">
@@ -29,7 +29,7 @@
 <RadzenStack Gap="1rem">
     <RadzenTabs RenderMode="Radzen.TabRenderMode.Client" Style="padding-left: 5px; padding-top: 5px">
         <Tabs>
-            <RadzenTabsItem Text="Allgemein">
+            <RadzenTabsItem Text="Daten">
                 <RadzenRow Style="margin-left: -21px; margin-top: -21px; margin-right: -16px">
                     <RadzenColumn Size="9">
                         <RadzenPanel Style="height: 700px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px; margin-top: 16px; margin-left: 16px" AllowCollapse="false">
@@ -295,8 +295,10 @@
                         <RadzenPanel Style="height: 700px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; padding-right: 0px; margin-left: 16px" AllowCollapse="false">
                             <RadzenTabs SelectedIndex="0" RenderMode="Radzen.TabRenderMode.Client" Style="margin-top: 8px; margin-left: 8px" >
                                 <Tabs>
+                                    <RadzenTabsItem Text="Übersicht"></RadzenTabsItem>
+                                    <RadzenTabsItem Text="Personen"></RadzenTabsItem>
                                     <RadzenTabsItem Text="Kontakte"></RadzenTabsItem>
-                                    <RadzenTabsItem Text="Bankverbindungen"></RadzenTabsItem>
+                                    <RadzenTabsItem Text="Notizen"></RadzenTabsItem>
                                 </Tabs>
                             </RadzenTabs>
                         </RadzenPanel>
@@ -305,8 +307,9 @@
 
             </RadzenTabsItem>
 
-            <RadzenTabsItem Text="Mitarbeiter"></RadzenTabsItem>
+            <RadzenTabsItem Text="Liste"></RadzenTabsItem>
             <RadzenTabsItem Text="Statistik"></RadzenTabsItem>
+            <RadzenTabsItem Text="Landkarte"></RadzenTabsItem>
         </Tabs>
 
     </RadzenTabs>

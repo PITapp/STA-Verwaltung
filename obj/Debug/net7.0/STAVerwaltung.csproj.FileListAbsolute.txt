@@ -99,3 +99,14 @@ C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publis
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\fluent-custom3.json
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\fluent-custom-V01.json
 C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\fluent-custom-V02.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\web.config
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\appsettings.Development.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\appsettings.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\appsettings.production.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\fluent-custom.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\STAVerwaltung.deps.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\AA Publish\STAVerwaltung.runtimeconfig.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\fluent-custom2.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\AA Publish\AA Publish\fluent-custom3.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\fluent-custom-V01.json
+C:\AA Painsi\09 PITapp\Projekte\STA-Verwaltung\AppWeb\bin\Debug\net7.0\AA Publish\AA Publish\fluent-custom-V02.json
